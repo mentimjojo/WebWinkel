@@ -31,6 +31,8 @@ class Database {
      * @return PDOStatement
      */
     public function query($query = '') {
+        // Global config
+        global $config;
         // Make sure it works
         try
         {
@@ -42,8 +44,11 @@ class Database {
         // Catch any errors
         catch (PDOException $ex)
         {
-            // Die with the message
-            die('Running query "' . $query . '" went wrong: ' . $ex->getMessage());
+            // Check if debug is on
+            if($config->debug->errors) {
+                // Die with the message
+                die('Running query "' . $query . '" went wrong: ' . $ex->getMessage());
+            }
         }
 
         // Return the result
