@@ -1,4 +1,7 @@
-<?php
+<?
+// Base directory
+define('BASEDIR', __DIR__);
+
 // Load complete system
-require_once __DIR__ . '/engine/init.php';
+require_once BASEDIR . '/engine/init.php';
 ?>
