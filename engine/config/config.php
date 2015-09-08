@@ -12,6 +12,7 @@ $config = (object) array(
         'host' => 'localhost',
         'name' => 'cylosi1q_webshop',
     ),
+    // Theme system
     'theme' => (object) array(
         'path' => 'theme'
     )
