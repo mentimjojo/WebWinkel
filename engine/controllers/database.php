@@ -14,7 +14,7 @@ class Database {
         // Make database connection
         try{
             // Set up the connection
-            $this->conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";", DB_USER, DB_PASS);
+            $this->conn = new PDO("mysql:host=".$config->db->host.";dbname=".$config->db->name.";", $config->db->user, $config->db->pass);
             // Debug
             if($config->debug->database) {
                 echo "There is a database connection. ";

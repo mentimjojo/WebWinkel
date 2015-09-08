@@ -1,6 +1,9 @@
 <?php
 // Array with all the config objects.
 $config = (object) array(
+    // basedir
+    'basedir' => __DIR__ . '/../../',
+    // Debug array
     'debug' => (object) array(
         'errors' => true,
         'database' => false
