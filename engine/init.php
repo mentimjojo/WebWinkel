@@ -17,7 +17,7 @@ if($config->debug == true) {
  * @param $class
  * @return bool
  */
-function __autoload($class) {
+function autoload($class) {
     $path = __DIR__ . 'controllers/' . strtolower($class) . '.php';
     if(file_exists($path)) {
         require $path;
@@ -26,6 +26,9 @@ function __autoload($class) {
         return false;
     }
 }
+
+// Register autoload function
+spl_autoload_register('autoload');
 
 // Creating database object
 $database = new Database();
