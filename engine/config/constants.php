@@ -7,3 +7,5 @@ define('DB_NAME', $config->db->name);
 
 // Define debugging
 define('DEBUG', $config->debug);
+
+?>

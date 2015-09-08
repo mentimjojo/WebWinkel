@@ -32,3 +32,5 @@ spl_autoload_register('autoload');
 
 // Creating database object
 $database = new Database();
+
+?>

@@ -12,3 +12,5 @@ $config = (object) array(
   ),
 
 );
+
+?>

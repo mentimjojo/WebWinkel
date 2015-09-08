@@ -11,6 +11,7 @@ class Database {
         try{
             // Set up the connection
             $this->conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";", DB_USER, DB_PASS);
+            // Debug
 
         } catch(PDOException $e){
             // Die if there is an error since the database is a main dependency
@@ -18,4 +19,5 @@ class Database {
         }
     }
 }
+
 ?>
