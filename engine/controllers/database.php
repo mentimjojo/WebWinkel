@@ -21,6 +21,21 @@ class Database {
             die("There is no database connection " . $e->errorInfo);
         }
     }
+
+    /**
+     * Run a query on the database
+     * @param string $query
+     */
+    public function query($query = '') {
+        // Prepare the query (remove injections)
+        $query = $this->conn->prepare($query);
+        // Run the prepared query
+        $result = $this->conn->query($query);
+
+        // Return the result
+        return $result;
+    }
+
 }
 
 ?>
