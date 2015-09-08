@@ -4,7 +4,7 @@ require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/config/constants.php';
 
 // Enable debugging
-if($config->debug == true) {
+if($config->debug->errors == true) {
     // Display errors
     ini_set('display_errors', 1);
     // Enable error reporting

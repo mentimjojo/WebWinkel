@@ -9,11 +9,12 @@ class Database {
      * Construct the database connection
      */
     public function __construct(){
+        global $config;
         try{
             // Set up the connection
             $this->conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";", DB_USER, DB_PASS);
             // Debug
-            if(DEBUG) {
+            if($config->debug->database) {
                 echo "There is a database connection. ";
             }
         } catch(PDOException $e){
