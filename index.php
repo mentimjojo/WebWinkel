@@ -1,4 +1,4 @@
-<?
+<?php
 // Base directory
 define('BASEDIR', __DIR__);
 
