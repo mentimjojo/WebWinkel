@@ -18,7 +18,7 @@ if($config->debug == true) {
  * @return bool
  */
 function autoload($class) {
-    $path = __DIR__ . 'controllers/' . strtolower($class) . '.php';
+    $path = __DIR__ . '/controllers/' . strtolower($class) . '.php';
     if(file_exists($path)) {
         require $path;
         return true;
