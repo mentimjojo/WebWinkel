@@ -3,7 +3,7 @@
 $config = (object) array(
     'debug' => (object) array(
         'errors' => true,
-        'database' => true
+        'database' => false
     ),
     // Database information
     'db' => (object) array (
