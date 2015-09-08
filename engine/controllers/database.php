@@ -2,6 +2,7 @@
 // Database class
 class Database {
 
+    // Private conn
     private $conn;
 
     /**
