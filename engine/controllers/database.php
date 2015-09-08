@@ -28,12 +28,23 @@ class Database {
     /**
      * Run a query on the database
      * @param string $query
+     * @return PDOStatement
      */
     public function query($query = '') {
-        // Prepare the query (remove injections)
-        $query = $this->conn->prepare($query);
-        // Run the prepared query
-        $result = $this->conn->query($query);
+        // Make sure it works
+        try
+        {
+            // Prepare the query (remove injections)
+            $query = $this->conn->prepare($query);
+            // Run the prepared query
+            $result = $this->conn->query($query);
+        }
+        // Catch any errors
+        catch (PDOException $ex)
+        {
+            // Die with the message
+            die('Running query "' . $query . '" went wrong: ' . $ex->getMessage());
+        }
 
         // Return the result
         return $result;
