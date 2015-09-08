@@ -6,7 +6,7 @@ class Theme{
         // Global config
         global $config;
         // Get theme path
-        require $config->basedir . '/' . $config->theme->path . '/index.php';
+        require $config->path->basedir . '/' . $config->path->theme . '/index.php';
     }
 
     // Page system
@@ -15,19 +15,21 @@ class Theme{
         global $config;
         // Check if page exists
         if(empty($_GET['page'])){
-            require $config->basedir . '/' . $config->theme->path . '/home.php';
+            require $config->path->basedir . '/' . $config->path->theme . '/home.php';
         } else {
             // Make page
             $page = $_GET['page'].'.php';
             // Check if exits
-            if (file_exists($config->basedir . '/' . $config->theme->path . '/' . $page)) {
-                require $config->basedir . '/' . $config->theme->path . '/' . $page;
+            if (file_exists($config->path->basedir . '/' . $config->path->theme . '/' . $page)) {
+                require $config->path->basedir . '/' . $config->path->theme . '/' . $page;
             } else {
                 // Show errors when debug on
                 echo "This page doesn't exists";
             }
         }
     }
+
+
 
 }
 ?>

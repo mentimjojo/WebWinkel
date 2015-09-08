@@ -1,10 +1,12 @@
 <?php
 // Array with all the config objects.
 $config = (object) array(
-    // basedir
-    'basedir' => __DIR__ . '/../../',
-    // base path
-    'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
+    // Path objects
+    'path' => (object) array(
+        'basedir' => __DIR__ . '/../../',
+        'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
+        'theme' => 'theme'
+    ),
     // Debug array
     'debug' => (object) array(
         'errors' => true,
@@ -22,5 +24,4 @@ $config = (object) array(
         'path' => 'theme'
     )
 );
-
 ?>
