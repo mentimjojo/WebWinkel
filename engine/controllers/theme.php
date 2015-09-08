@@ -15,6 +15,7 @@ class Theme{
         global $config;
         // Check if page exists
         if(empty($_GET['page'])){
+            // Require home page
             require $config->path->basedir . '/' . $config->path->theme . '/home.php';
         } else {
             // Make page
