@@ -3,6 +3,8 @@
 $config = (object) array(
     // basedir
     'basedir' => __DIR__ . '/../../',
+    // base path
+    'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
     // Debug array
     'debug' => (object) array(
         'errors' => true,
