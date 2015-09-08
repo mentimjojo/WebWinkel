@@ -10,7 +10,9 @@ $config = (object) array(
       'host' => 'localhost',
       'name' => 'cylosi1q_webshop',
   ),
-
+  'theme' => (object) array(
+      'path' => 'theme'
+  )
 );
 
 ?>

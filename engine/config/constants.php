@@ -8,4 +8,7 @@ define('DB_NAME', $config->db->name);
 // Define debugging
 define('DEBUG', $config->debug);
 
+// Theme defines
+define('THEME_PATH', $config->theme->path);
+
 ?>
