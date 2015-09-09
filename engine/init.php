@@ -44,11 +44,18 @@ $database = new Database();
 // Create theme object
 $theme = new Theme();
 
+// Get user lang
+if(isset($_COOKIE['lang'])) {
+    $userlang = $_COOKIE['lang'];
+} else {
+    $userlang = $config->lang->default;
+}
 // Create language object
-$lang = new Language();
+$lang = new Language($userlang);
 
 // Short for language
 function __($key = '') {
+    global $lang;
     return $lang->get($key);
 }
 

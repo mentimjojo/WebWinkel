@@ -28,7 +28,7 @@ class Language {
         foreach($key as $key) {
             $keystring .= "['".$key."']'";
         }
-        $string = eval($keystring);
+        $string = eval("return " . $keystring . ";");
         if($string) {
             return $string;
         } else {
