@@ -41,9 +41,6 @@ spl_autoload_register('autoload');
 // Creating database object
 $database = new Database();
 
-// Create theme object
-$theme = new Theme();
-
 // Get user lang
 if(isset($_COOKIE['lang'])) {
     $userlang = $_COOKIE['lang'];
@@ -57,8 +54,11 @@ $lang = new Language($userlang);
  * Short function for getting a translated string using the language class
  * @param string $key
  */
-function __($key = '', $replace = array()) {
+function lang($key = '', $replace = array()) {
     global $lang;
     echo $lang->get($key, $replace);
 }
+
+// Create theme object
+$theme = new Theme();
 ?>
