@@ -48,6 +48,8 @@ class Database {
             if($config->debug->errors) {
                 // Die with the message
                 die('Running query "' . $query . '" went wrong: ' . $ex->getMessage());
+            } else {
+                $config->debug->getErrors[] = 'Running query "' . $query . '" went wrong: ' . $ex->getMessage();
             }
         }
 
