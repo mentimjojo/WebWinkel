@@ -40,21 +40,22 @@ class Database {
             $query = $this->conn->prepare($query);
             // Run the prepared query
             $result = $this->conn->query($query);
+            // Return the result
+            return $result;
         }
         // Catch any errors
-        catch (PDOException $ex)
-        {
+        catch (PDOException $ex) {
             // Check if debug is on
-            if($config->debug->errors) {
+            if ($config->debug->errors) {
                 // Die with the message
-                die('Running query "' . $query . '" went wrong: ' . $ex->getMessage());
+                die('Running query "' . $query . '" went wrong: ');
+                var_dump($ex);
             } else {
                 $config->debug->getErrors[] = 'Running query "' . $query . '" went wrong: ' . $ex->getMessage();
             }
         }
-
-        // Return the result
-        return $result;
+        // If not returned yet, return false
+        return false;
     }
 
 }
