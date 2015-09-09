@@ -10,6 +10,7 @@ $config = (object) array(
     // Debug array
     'debug' => (object) array(
         'errors' => true,
+        'getErrors' => array(),
         'database' => false
     ),
     // Database information
