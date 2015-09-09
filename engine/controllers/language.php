@@ -12,8 +12,10 @@ class Language {
         if($path) {
             $this->path = $path;
         } else {
-            $this->path = $config->path->language . $lang;
+            $this->path = $config->path->language . '/' . $lang;
         }
     }
+
+    public function get($)
 
 }
