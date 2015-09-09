@@ -5,8 +5,8 @@ $config = (object) array(
     'path' => (object) array(
         'basedir' => __DIR__ . '/../../',
         'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
-        'theme' => BASEDIR . 'theme',
-        'languages' => BASEDIR . '/languages/'
+        'theme' => BASEDIR . '/theme',
+        'languages' => BASEDIR . '/languages'
     ),
     // Debug array
     'debug' => (object) array(
