@@ -1,11 +1,19 @@
 <?php
-// Language class
+
+/**
+ * Class Language
+ */
 class Language {
 
     private $lang;
     private $path;
     private $data;
 
+    /**
+     * Construct the language object
+     * @param string $lang
+     * @param string $path
+     */
     public function __construct($lang = 'en', $path = '') {
         global $config;
 
@@ -22,13 +30,22 @@ class Language {
         }
     }
 
-    public function get($pkey = '') {
+
+    /**
+     * Get translated string
+     * @param string $pkey
+     * @return string
+     */
+    public function get($pkey = '', $replace = array()) {
         $keys = explode('.', $pkey);
         $keystring = '$this->data->strings';
-        foreach($key as $key) {
-            $keystring .= "['".$key."']'";
+        foreach($keys as $key) {
+            $keystring .= "->".$key;
         }
         $string = eval("return " . $keystring . ";");
+        foreach($replace as $k=>$v) {
+            $string = str_replace(':'.$k.':', $v, $string);
+        }
         if($string) {
             return $string;
         } else {

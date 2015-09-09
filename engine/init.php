@@ -53,10 +53,12 @@ if(isset($_COOKIE['lang'])) {
 // Create language object
 $lang = new Language($userlang);
 
-// Short for language
-function __($key = '') {
+/**
+ * Short function for getting a translated string using the language class
+ * @param string $key
+ */
+function __($key = '', $replace = array()) {
     global $lang;
-    return $lang->get($key);
+    echo $lang->get($key, $replace);
 }
-
 ?>
