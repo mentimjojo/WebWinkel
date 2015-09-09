@@ -24,8 +24,13 @@ class Theme{
             if (file_exists($config->path->basedir . '/' . $config->path->theme . '/' . $page)) {
                 require $config->path->basedir . '/' . $config->path->theme . '/' . $page;
             } else {
-                // Show errors when debug on
-                echo "This page doesn't exists";
+                if($config->debug->errors){
+                    // Show all errors
+                    $config->debug->getErrors[] = "An page error with the following information: " . $page;
+                } else {
+                    // Show errors when debug on
+                    $config->debug->getErrors[] = "This page doesn't exists";
+                }
             }
         }
     }
