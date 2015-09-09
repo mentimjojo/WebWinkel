@@ -5,8 +5,12 @@ $config = (object) array(
     'path' => (object) array(
         'basedir' => __DIR__ . '/../../',
         'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
-        'theme' => 'theme',
-        'languages' => 'languages'
+        'theme' => 'theme'
+    ),
+    // Language
+    'language' => (object) array(
+        'default' => 'NL',
+        'path' => 'languages'
     ),
     // Debug array
     'debug' => (object) array(
