@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Gretong a Ecommerce Category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
+    <title>PC4U</title>
     <link href="<?=$config->theme->url;?>/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary JavaScript plugins) -->
     <script type='text/javascript' src="<?=$config->theme->url;?>/js/jquery-1.11.1.min.js"></script>
@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="header">
             <div class="head-t">
                 <div class="logo">
-                    <a href="index.php"><img src="<?=$config->theme->url;?>/images/logo.png" class="img-responsive" alt=""/> </a>
+                    <a href="index.php"><img src="<?=$config->theme->url;?>/images/pc4u.png" class="img-responsive" alt=""/> </a>
                 </div>
                 <!-- start header_right -->
                 <div class="header_right">
@@ -86,14 +86,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="register.html">REGISTER</a>
                         </div>
                         <div class="cart box_1">
-                            <a href="checkout.html">
+                            <a href="<?=$config->theme->url;?>/checkout.html">
                                 <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="<?=$config->theme->url;?>/images/bag.png" alt=""></h3>
                             </a>
                             <p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
                             <div class="clearfix"> </div>
                         </div>
                         <div class="create_btn">
-                            <a href="checkout.html">CHECKOUT</a>
+                            <a href="<?=$config->theme->url;?>/checkout.html">CHECKOUT</a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
