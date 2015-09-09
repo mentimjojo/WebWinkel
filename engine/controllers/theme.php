@@ -1,7 +1,9 @@
 <?php
 class Theme{
 
-    // Get theme
+    /**
+     * Initialize theme
+     */
     public function __construct(){
         // Global config
         global $config;
@@ -9,7 +11,9 @@ class Theme{
         require $config->path->basedir . '/theme/' . $config->theme->path . '/index.php';
     }
 
-    // Page system
+    /**
+     * Page system
+     */
     public function PageSystem(){
         // Global config
         global $config;
