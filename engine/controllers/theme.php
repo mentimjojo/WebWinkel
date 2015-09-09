@@ -5,8 +5,8 @@ class Theme{
     public function __construct(){
         // Global config
         global $config;
-        // Get theme path
-        require $config->path->basedir . '/' . $config->path->theme . '/index.php';
+        // Load theme
+        require $config->path->basedir . '/theme/' . $config->theme->path . '/index.php';
     }
 
     // Page system
@@ -16,13 +16,13 @@ class Theme{
         // Check if page exists
         if(empty($_GET['page'])){
             // Require home page
-            require $config->path->basedir . '/' . $config->path->theme . '/home.php';
+            require $config->path->basedir . '/theme/' . $config->theme->path . '/home.php';
         } else {
             // Make page
             $page = $_GET['page'].'.php';
             // Check if exits
-            if (file_exists($config->path->basedir . '/' . $config->path->theme . '/' . $page)) {
-                require $config->path->basedir . '/' . $config->path->theme . '/' . $page;
+            if (file_exists($config->path->basedir . '/theme/' . $config->theme->path . '/' . $page)) {
+                require $config->path->basedir . '/theme/' . $config->theme->path . '/' . $page;
             } else {
                 if($config->debug->errors){
                     // Show all errors

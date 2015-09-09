@@ -4,14 +4,18 @@ $config = (object) array(
     // Path objects
     'path' => (object) array(
         'basedir' => __DIR__ . '/../../',
-        'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
-        'theme' => 'theme',
-        'themepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10).$this->path->theme
+        'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10)
     ),
     // Language
     'language' => (object) array(
         'default' => 'NL',
         'path' => 'languages'
+    ),
+    // Theme system
+    'theme' => (object) array(
+        'name' => 'Download',
+        'path' => 'download',
+        'url' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10).'/theme/download'
     ),
     // Debug array
     'debug' => (object) array(
@@ -25,10 +29,6 @@ $config = (object) array(
         'pass' => 'webshop',
         'host' => 'localhost',
         'name' => 'cylosi1q_webshop',
-    ),
-    // Theme system
-    'theme' => (object) array(
-        'path' => 'theme'
     )
 );
 ?>
