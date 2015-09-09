@@ -21,7 +21,7 @@ class Language {
         if($path) {
             $this->path = $path;
         } else {
-            $this->path = BASEDIR . '/' . $config->lang->path . '/' . $lang . '.php';
+            $this->path = BASEDIR . '/' . $config->language->path . '/' . $lang . '.php';
         }
         if(!file_exists($this->path)) {
             die('The language path does\'t exist');
