@@ -48,7 +48,7 @@ $theme = new Theme();
 if(isset($_COOKIE['lang'])) {
     $userlang = $_COOKIE['lang'];
 } else {
-    $userlang = $config->lang->default;
+    $userlang = $config->language->default;
 }
 // Create language object
 $lang = new Language($userlang);
