@@ -5,7 +5,8 @@ $config = (object) array(
     'path' => (object) array(
         'basedir' => __DIR__ . '/../../',
         'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
-        'theme' => 'theme'
+        'theme' => 'theme',
+        'themepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10).$this->path->theme
     ),
     // Language
     'language' => (object) array(
