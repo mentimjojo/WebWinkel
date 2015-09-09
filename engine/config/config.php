@@ -6,6 +6,7 @@ $config = (object) array(
         'basedir' => __DIR__ . '/../../',
         'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10),
         'theme' => 'theme',
+        'themeurl' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10).'/'.$this->path->theme,
         'languages' => 'languages'
     ),
     // Debug array
