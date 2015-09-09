@@ -1,11 +1,11 @@
 .megamenu{margin-bottom:0px;padding:0;width:100%;list-style:none;display:inline-block;position:relative;font-family:Calibri,Arial;font-size:15px}
 .megamenu li{margin-bottom:-5px;display:inline}
-.megamenu>li>a{float:left;padding:8px 34px;text-decoration:none;text-transform:capitalize;font-size:1em; -webkit-transition: all 0.3s ease-in-out;text-transform:uppercase;
+.megamenu>li>a{color:white;float:left;padding:8px 34px;text-decoration:none;text-transform:capitalize;font-size:1em; -webkit-transition: all 0.3s ease-in-out;text-transform:uppercase;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.megamenu>li.active>a{background:#e4e4e4;}
+.megamenu>li.active>a{background:#00719E;}
 .megamenu>li.right{float:right}
 .megamenu .dropdown,.megamenu .dropdown li .dropdown{list-style:none;margin:0;padding:0;display:none;position:absolute;z-index:999;width:160px;border:solid 1px rgba(0,0,0,0.1);background:#fff}
 .megamenu .dropdown{top:59px}
@@ -41,7 +41,7 @@
 .skyblue,.skyblue>li.showhide{
 }
 	
-.skyblue li>a,.skyblue>li.showhide span{color:#3f3d3d}
+.skyblue li>a,.skyblue>li.showhide span{color:white}
 .skyblue>li:hover>a,.skyblue .dropdown li:hover>a{color:#555; background:#ffffff;}.
 skyblue .megapanel img:hover,.skyblue form.contact input[type="text"]:focus,.skyblue form.contact textarea:focus{}
 .skyblue form.contact input[type="submit"]{background:#00405d;text-transform:uppercase;}
