@@ -17,15 +17,23 @@ class Language {
         }
         if(!file_exists($this->path)) {
             die('The language path does\'t exist');
+        } else {
+            $this->data = require $this->path;
         }
     }
 
-    public function get($key = '') {
-
-    }
-
-    public function listLanguages() {
-
+    public function get($pkey = '') {
+        $keys = explode('.', $pkey);
+        $keystring = '$this->data->strings';
+        foreach($key as $key) {
+            $keystring .= "['".$key."']'";
+        }
+        $string = eval($keystring);
+        if($string) {
+            return $string;
+        } else {
+            return $pkey;
+        }
     }
 
 }

@@ -44,4 +44,12 @@ $database = new Database();
 // Create theme object
 $theme = new Theme();
 
+// Create language object
+$lang = new Language();
+
+// Short for language
+function __($key = '') {
+    return $lang->get($key);
+}
+
 ?>
