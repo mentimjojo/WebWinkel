@@ -36,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="header_top">
             <div class="top_right">
                 <ul>
-                    <li><a href="#">help</a></li>|
+                    <li><a href="#"><?=lang('header.help')?></a></li>|
                     <li><a href="contact.html">Contact</a></li>|
                     <li><a href="#">Delivery information</a></li>
                 </ul>
