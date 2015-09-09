@@ -42,8 +42,17 @@ spl_autoload_register('autoload');
 $database = new Database();
 
 // Get user lang
-if(isset($_COOKIE['lang'])) {
-    $userlang = $_COOKIE['lang'];
+if(isset($_GET['lang']) OR isset($_COOKIE['lang'])) {
+    // Check if lang get is set
+    if(isset($_GET['lang'])){
+        // Set cookie
+        setcookie('lang', $_GET['lang']);
+        // Set lang
+        $userlang = $_GET['lang'];
+    } else if(isset($_COOKIE['lang'])) {
+        // Else set lang
+        $userlang = $_COOKIE['lang'];
+    }
 } else {
     $userlang = $config->language->default;
 }

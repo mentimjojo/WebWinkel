@@ -14,14 +14,14 @@ class Language {
      * @param string $lang
      * @param string $path
      */
-    public function __construct($lang = 'en', $path = '') {
+    public function __construct($lang, $path = '') {
         global $config;
 
         $this->lang = $lang;
         if($path) {
             $this->path = $path;
         } else {
-            $this->path = BASEDIR . '/' . $config->language->path . '/' . $lang . '.php';
+            $this->path = BASEDIR . '/engine/' . $config->language->path . '/' . $lang . '.php';
         }
         if(!file_exists($this->path)) {
             die('The language path does\'t exist');

@@ -37,12 +37,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="top_right">
                 <ul>
                     <li><a href="#"><?=lang('header.help')?></a></li>|
-                    <li><a href="contact.html">Contact</a></li>|
-                    <li><a href="#">Delivery information</a></li>
+                    <li><a href="contact.html"><?=lang('header.contact')?></a></li>|
+                    <li><a href="#"><?=lang('header.deliveryinfo')?></a></li>
                 </ul>
             </div>
             <div class="top_left">
-                <h2><span></span> Call us : 032 2352 782</h2>
+                <h2><span></span><?=lang('header.callus', array('phonenumber' => '0900 1145'))?></h2>
             </div>
             <div class="clearfix"> </div>
         </div>
