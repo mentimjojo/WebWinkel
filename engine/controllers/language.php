@@ -47,7 +47,7 @@ class Language {
             foreach ($replace as $k => $v) {
                 $string = str_replace(':' . $k . ':', $v, $string);
             }
-            return string;
+            return $string;
         } else {
             return false;
         }
