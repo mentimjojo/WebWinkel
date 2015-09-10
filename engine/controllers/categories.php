@@ -55,7 +55,7 @@ class Categories {
      * @param string $id
      * @return bool|object
      */
-    public function getOne($id = '') {
+    public function getOne($id = '', $lang = 'en') {
         /** @var array $id Exploded list of id */
         $id = explode(".", $id);
         /** @var string $string String to be eval'd */
@@ -65,6 +65,10 @@ class Categories {
             // Add it to the string to be eval'd
             $string = $string[$i];
         }
+        // Temporary object -> array
+        $tstring = (array) $string;
+        // Set ->name to equal current lang
+        $string->name = $tstring['name_'.$lang];
         // Check if the category exist
         return (object) $string;
         // The category doesn't exist
