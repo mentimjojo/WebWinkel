@@ -26,6 +26,29 @@ return (object) array(
         'navbar' => (object) array(
             'home' => 'Home'
         ),
-        'welcome' => 'Welcome to PC4U'
+        'welcome' => 'Welcome to PC4U',
+        'footer' => (object) array(
+            'care' => (object) array(
+                'title' => 'Customer Care',
+                'help' => 'Help center',
+                'FAQ' => 'FAQ',
+                'payment' => 'Payments',
+                'delivery' => 'Delivery'
+            ),
+            'about' => (object) array(
+                'title' => 'About us',
+                'history' => 'Our history',
+                'career' => 'Career'
+            ),
+            'account' => (object) array(
+                'title' => 'My account',
+                'register' => 'Register',
+                'login' => 'Login',
+                'cart' => 'My cart',
+                'history' => 'Payment history'
+            ),
+            'info' => 'Information',
+            'template' => 'Template by R.Schepers'
+        )
     )
 );

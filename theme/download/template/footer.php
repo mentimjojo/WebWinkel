@@ -41,39 +41,32 @@
 <div class="footer">
     <div class="container">
         <div class="col-md-3 cust">
-            <h4>CUSTOMER CARE</h4>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="buy.html">How To Buy</a></li>
-            <li><a href="#">Delivery</a></li>
+            <h4><?=lang('footer.care.title');?></h4>
+            <li><a href="#"><?=lang('footer.care.help');?></a></li>
+            <li><a href="#"><?=lang('footer.care.FAQ');?></a></li>
+            <li><a href="buy.html"><?=lang('footer.care.payment');?></a></li>
+            <li><a href="#"><?=lang('footer.care.delivery');?></a></li>
         </div>
         <div class="col-md-2 abt">
-            <h4>ABOUT US</h4>
-            <li><a href="#">Our Stories</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <h4><?=lang('footer.about.title');?></h4>
+            <li><a href="#"><?=lang('footer.about.history');?></a></li>
+            <li><a href="#"><?=lang('footer.about.career');?></a></li>
         </div>
         <div class="col-md-2 myac">
-            <h4>MY ACCOUNT</h4>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="#">My Cart</a></li>
-            <li><a href="#">Order History</a></li>
-            <li><a href="buy.html">Payment</a></li>
+            <h4><?=lang('footer.account.title');?></h4>
+            <?php if(isset($_SESSION['login.id'])){?>
+                <li><a href="#"><?=lang('footer.account.history');?></a></li>
+            <?php } else { ?>
+                <li><a href="#"><?=lang('footer.account.register');?></a></li>
+                <li><a href="#"><?=lang('footer.account.login');?></a></li>
+            <?php } ?>
+            <li><a href="#"><?=lang('footer.account.cart');?></a></li>
+
+
         </div>
         <div class="col-md-5 our-st">
             <div class="our-left">
-                <h4>OUR STORES</h4>
-            </div>
-            <div class="our-left1">
-                <div class="cr_btn">
-                    <a href="#">SOLO</a>
-                </div>
-            </div>
-            <div class="our-left1">
-                <div class="cr_btn1">
-                    <a href="#">BOGOR</a>
-                </div>
+                <h4><?=lang('footer.info');?></h4>
             </div>
             <div class="clearfix"> </div>
             <li><i class="add"> </i><?=$config->dbconfig->adress.' '.$config->dbconfig->adress_number.' '.$config->dbconfig->zipcode.' '.$config->dbconfig->city;?></li>
@@ -82,7 +75,7 @@
 
         </div>
         <div class="clearfix"> </div>
-        <p>Copyright &copy; 2015 <?=$config->dbconfig->title;?> - Template by Rick Schepers</p>
+        <p>Copyright &copy; 2015 <?=$config->dbconfig->title;?> - <?=lang('footer.template');?></p>
     </div>
 </div>
 </body>
