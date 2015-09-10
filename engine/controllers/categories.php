@@ -8,10 +8,11 @@ class Categories {
      * Constructor for Categories
      */
     public function __construct() {
-        // Global $config
+        // Global $config and $database
         global $config;
+        global $database;
         // Get config table
-        $query = $this->query("SELECT * FROM " . $config->db_tables->categories);
+        $query = $database->query("SELECT * FROM " . $config->db_tables->categories);
 
         // Create empty object
         $categories = (object) array();
