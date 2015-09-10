@@ -76,9 +76,9 @@
                 </div>
             </div>
             <div class="clearfix"> </div>
-            <li><i class="add"> </i>Jl. Haji Muhidin, Blok G no.69</li>
-            <li><i class="phone"> </i>025-2839341</li>
-            <li><a href="mailto:info@example.com"><i class="mail"> </i>info@sitename.com </a></li>
+            <li><i class="add"> </i><?=$config->dbconfig->adress.' '.$config->dbconfig->adress_number.' '.$config->dbconfig->zipcode.' '.$config->dbconfig->city;?></li>
+            <li><i class="phone"> </i><?=$config->dbconfig->phone;?></li>
+            <li><a href="mailto:info@example.com"><i class="mail"> </i><?=$config->dbconfig->email;?> </a></li>
 
         </div>
         <div class="clearfix"> </div>

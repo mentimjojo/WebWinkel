@@ -15,6 +15,8 @@ class Database {
         try{
             // Set up the connection
             $this->conn = new PDO("mysql:host=".$config->db->host.";dbname=".$config->db->name.";", $config->db->user, $config->db->pass);
+            // Build config
+            $this->getConfig();
             // Debug
             if($config->debug->database) {
                 echo "There is a database connection. ";
@@ -37,11 +39,7 @@ class Database {
         try
         {
             // Prepare the query (remove injections)
-            $stmt = $this->conn->prepare($query);
-            // Run the prepared query
-            $result = $stmt->execute();
-            // Close the statement
-            $stmt->closeCursor();
+            $result = $this->conn->query($query);
             // Return the result
             return $result;
         }
@@ -57,6 +55,20 @@ class Database {
         }
         // If not returned yet, return false
         return false;
+    }
+
+    /*
+     * Config function
+     */
+    public function getConfig(){
+        // Global $config
+        global $config;
+        // Get config table
+        $query = $this->query("SELECT * FROM " . $config->db_tables->config . " WHERE id = 1");
+        // Fetch query
+        $result = $query->fetch();
+        // Test
+        $config->dbconfig = (object) $result;
     }
 
     /**

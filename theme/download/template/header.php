@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>PC4U</title>
+    <title><?=$config->dbconfig->title;?></title>
     <link href="<?=$config->theme->url;?>/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary JavaScript plugins) -->
     <script type='text/javascript' src="<?=$config->theme->url;?>/js/jquery-1.11.1.min.js"></script>
@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
             </div>
             <div class="top_left">
-                <h2><span></span><?=lang('header.callus', array('phonenumber' => '0900 1145'))?></h2>
+                <h2><span></span><?=lang('header.callus', array('phonenumber' => $config->dbconfig->phone))?></h2>
             </div>
             <div class="clearfix"> </div>
         </div>

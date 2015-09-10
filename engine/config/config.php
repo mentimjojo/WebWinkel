@@ -29,6 +29,13 @@ $config = (object) array(
         'pass' => 'webshop',
         'host' => 'localhost',
         'name' => 'cylosi1q_webshop',
+        'prefix' => 'ws_'
     )
+);
+
+// Database tables
+$config->db_tables = (object) array(
+    'config' => $config->db->prefix . 'config',
+    'category' => $config->db->prefix . 'category'
 );
 ?>
