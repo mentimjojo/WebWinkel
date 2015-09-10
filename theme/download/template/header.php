@@ -70,30 +70,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <input type="text" name="email" id="email">
                                                 </fieldset>
                                                 <fieldset>
-                                                    <label for="password">Password</label>
+                                                    <label for="password"><?=lang('login.password')?></label>
                                                     <input type="password" name="password" id="password">
                                                 </fieldset>
-                                                <input type="submit" id="login" value="Sign in">
-                                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                                                <input type="submit" id="login" value="<?=lang('login.signin')?>">
+                                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i><?=lang('login.remember')?></i></label>
                                             </fieldset>
-                                            <span><a href="#">Forgot your password?</a></span>
+                                            <span><a href="#"><?=lang('login.forgot')?></a></span>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="reg">
-                            <a href="register.html">REGISTER</a>
+                            <a href="register.html"><?=lang('header.register')?></a>
                         </div>
                         <div class="cart box_1">
                             <a href="<?=$config->theme->url;?>/checkout.html">
-                                <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="<?=$config->theme->url;?>/images/bag.png" alt=""></h3>
+                                <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> <?=lang('cart.items')?>)<img src="<?=$config->theme->url;?>/images/bag.png" alt=""></h3>
                             </a>
-                            <p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
+                            <p><a href="javascript:;" class="simpleCart_empty"><?=lang('cart.empty')?></a></p>
                             <div class="clearfix"> </div>
                         </div>
                         <div class="create_btn">
-                            <a href="<?=$config->theme->url;?>/checkout.html">CHECKOUT</a>
+                            <a href="<?=$config->theme->url;?>/checkout.html"><?=lang('cart.checkout')?></a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
