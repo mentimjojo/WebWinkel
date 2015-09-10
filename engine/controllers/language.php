@@ -49,7 +49,7 @@ class Language {
             }
             return $string;
         } else {
-            return '<span style="color: red;">' . $pkey . '</span>';
+            return '<span style="color: red;font-style: italic;">' . $pkey . '</span>';
         }
     }
 

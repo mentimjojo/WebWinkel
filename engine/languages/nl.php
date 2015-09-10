@@ -27,6 +27,29 @@ return (object) array(
             'home' => 'Home'
         ),
         'welcome' => 'Welkom bij PC4U',
+        'footer' => (object) array(
+            'care' => (object) array(
+                'title' => 'Klantenservice',
+                'help' => 'Help centrum',
+                'FAQ' => 'FAQ',
+                'payment' => 'Betalen',
+                'delivery' => 'Bezorging'
+            ),
+            'about' => (object) array(
+                'title' => 'Over ons',
+                'history' => 'Geschiendenis',
+                'career' => 'Vacatures'
+            ),
+            'account' => (object) array(
+                'title' => 'Mijn Account',
+                'register' => 'Registeren',
+                'login' => 'Login',
+                'cart' => 'Mijn winkelwagen',
+                'history' => 'Bestel geschiendenis'
+            ),
+            'info' => 'Informatie',
+            'template' => 'Template door R.Schepers'
+        )
 
     )
 );
