@@ -68,6 +68,8 @@ function lang($key = '', $replace = array()) {
     echo $lang->get($key, $replace);
 }
 
+$categories = new Categories();
+
 // Create theme object
 $theme = new Theme();
 ?>

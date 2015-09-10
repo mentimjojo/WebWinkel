@@ -37,6 +37,8 @@ class Categories {
         }
         // Putting the categories in the object
         $this->categories = $categories;
+
+        var_dump($this->categories);
     }
 
     /**
