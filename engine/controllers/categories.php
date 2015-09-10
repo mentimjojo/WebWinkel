@@ -18,6 +18,8 @@ class Categories {
         $categories = (object) array();
         // While loop for all categories
         foreach($query->fetchAll() as $row) {
+            /** @var object $row The row as an object */
+            $row = (object) $row;
             /** @var integer $id The category id */
             $id = $row->id;
             // Check if a sub category is set
