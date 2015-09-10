@@ -15,7 +15,7 @@ class Categories {
         $query = $database->query("SELECT * FROM " . $config->db_tables->category);
 
         // Create empty object
-        $categories = (object) array();
+        $categories = array();
         // While loop for all categories
         foreach($query->fetchAll() as $row) {
             /** @var object $row The row as an object */
