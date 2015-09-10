@@ -21,6 +21,7 @@ return (object) array(
         'cart' => (object) array(
             'items' => 'producten',
             'checkout' => 'Bestellen',
+            'empty' => 'Geen producten'
         ),
         'navbar' => (object) array(
             'home' => 'Home'
