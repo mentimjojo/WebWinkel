@@ -59,7 +59,11 @@ class Database {
         return false;
     }
 
+    /**
+     * Closing the connection
+     */
     public function __destruct() {
+        // Set the conn to null to close it
         $this->conn = null;
     }
 
