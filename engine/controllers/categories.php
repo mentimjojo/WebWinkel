@@ -18,7 +18,6 @@ class Categories {
         $categories = (object) array();
         // While loop for all categories
         foreach($query->fetchAll() as $row) {
-            $row = (object) $row;
             /** @var integer $id The category id */
             $id = $row->id;
             // Check if a sub category is set
@@ -28,13 +27,13 @@ class Categories {
                 // Check if head exists
                 if(!isset($categories->$sub)) {
                     // Setting initial head
-                    $categories->$sub = (object) array();
+                    $categories[$sub] = array();
                 }
                 // Adding the sub category to the object
-                $categories->$sub->sub->$id = $row;
+                $categories[$sub]['sub'][$id] = $row;
             } else {
                 // Adding the category to the object
-                $categories->$id = $row;
+                $categories[$id] = $row;
             }
         }
         // Putting the categories in the object
@@ -62,7 +61,7 @@ class Categories {
         // Foreach exploded id
         foreach ($id as $i) {
             // Add it to the string to be eval'd
-            $string .= '->' . $i;
+            $string .= '["' . $i . '"]"';
         }
         // Check if the category exist
         if (eval("if(isset($string)) return true; else return false;")) {
