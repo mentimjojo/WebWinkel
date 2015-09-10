@@ -36,6 +36,6 @@ $config = (object) array(
 // Database tables
 $config->db_tables = (object) array(
     'config' => $config->db->prefix . 'config',
-    'category' => $config->db->prefix . 'category'
+    'category' => $config->db->prefix . 'categories'
 );
 ?>
