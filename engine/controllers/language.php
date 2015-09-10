@@ -49,7 +49,7 @@ class Language {
             }
             return $string;
         } else {
-            return false;
+            return $pkey;
         }
     }
 
