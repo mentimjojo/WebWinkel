@@ -59,17 +59,14 @@ class Categories {
         /** @var array $id Exploded list of id */
         $id = explode(".", $id);
         /** @var string $string String to be eval'd */
-        $string = '$this->categories';
+        $string = $this->categories;
         // Foreach exploded id
         foreach ($id as $i) {
             // Add it to the string to be eval'd
-            $string .= '["' . $i . '"]"';
+            $string = $string[$i];
         }
         // Check if the category exist
-        if (eval("if(isset($string)) return true; else return false;")) {
-            // Return the category
-            return eval("return $string;");
-        }
+        return (object) $string;
         // The category doesn't exist
         return false;
     }
