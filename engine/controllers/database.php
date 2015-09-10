@@ -37,9 +37,11 @@ class Database {
         try
         {
             // Prepare the query (remove injections)
-            $query = $this->conn->prepare($query);
+            $stmt = $this->conn->prepare($query);
             // Run the prepared query
-            $result = $this->conn->query($query);
+            $result = $stmt->execute();
+            // Close the statement
+            $stmt->closeCursor();
             // Return the result
             return $result;
         }
@@ -48,14 +50,17 @@ class Database {
             // Check if debug is on
             if ($config->debug->errors) {
                 // Die with the message
-                die('Running query "' . $query . '" went wrong: ');
-                var_dump($ex);
+                die('Running query "' . $query . '" went wrong: ' . $ex->getMessage());
             } else {
                 $config->debug->getErrors[] = 'Running query "' . $query . '" went wrong: ' . $ex->getMessage();
             }
         }
         // If not returned yet, return false
         return false;
+    }
+
+    public function __destruct() {
+        $this->conn = null;
     }
 
 }
