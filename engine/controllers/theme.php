@@ -7,6 +7,7 @@ class Theme{
     public function __construct(){
         // Global config
         global $config;
+        global $categories;
         // Load theme
         require $config->path->basedir . '/theme/' . $config->theme->path . '/index.php';
     }
@@ -17,6 +18,7 @@ class Theme{
     public function PageSystem(){
         // Global config
         global $config;
+        global $categories;
         // Check if page exists
         if(empty($_GET['page'])){
             // Require home page

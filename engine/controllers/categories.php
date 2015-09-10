@@ -12,16 +12,17 @@ class Categories {
         global $config;
         global $database;
         // Get config table
-        $query = $database->query("SELECT * FROM " . $config->db_tables->categories);
+        $query = $database->query("SELECT * FROM " . $config->db_tables->category);
 
         // Create empty object
         $categories = (object) array();
         // While loop for all categories
-        while((object) $row = $query->fetch()) {
+        foreach($query->fetchAll() as $row) {
+            $row = (object) $row;
             /** @var integer $id The category id */
             $id = $row->id;
             // Check if a sub category is set
-            if($row->sub != '') {
+            if($row->sub != 0) {
                 /** @var integer $sub The sub category id */
                 $sub = $row->sub;
                 // Check if head exists
@@ -38,8 +39,6 @@ class Categories {
         }
         // Putting the categories in the object
         $this->categories = $categories;
-
-        var_dump($this->categories);
     }
 
     /**
