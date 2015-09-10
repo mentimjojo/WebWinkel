@@ -82,7 +82,7 @@
 
         </div>
         <div class="clearfix"> </div>
-        <p>Copyright &copy; 2015 PC4U - Template by Rick Schepers</p>
+        <p>Copyright &copy; 2015 <?=$config->dbconfig->title;?> - Template by Rick Schepers</p>
     </div>
 </div>
 </body>
