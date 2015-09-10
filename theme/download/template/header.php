@@ -61,12 +61,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="rgt-bottom">
                         <div class="log">
                             <div class="login" >
-                                <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+                                <div id="loginContainer"><a href="#" id="loginButton"><span><?=lang('login.login')?></span></a>
                                     <div id="loginBox">
                                         <form id="loginForm">
                                             <fieldset id="body">
                                                 <fieldset>
-                                                    <label for="email">Email Address</label>
+                                                    <label for="email"><?=lang('login.email')?></label>
                                                     <input type="text" name="email" id="email">
                                                 </fieldset>
                                                 <fieldset>

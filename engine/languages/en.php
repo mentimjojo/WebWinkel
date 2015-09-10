@@ -8,10 +8,19 @@ return (object) array(
             'deliveryinfo' => 'Delivery Information',
             'callus' => 'Call us: :phonenumber:',
             'register' => 'Register',
-            'login' => 'Login',
+            'search' => 'Search'
         ),
-        'cart' => array(
-            'items' => 'items'
+        'login' => (object) array(
+            'login' => 'Login',
+            'signin' => 'Sign in',
+            'email' => 'Email address',
+            'password' => 'Password',
+            'remember' => 'Remember me',
+            'forgot' => 'Forgot your password?'
+        ),
+        'cart' => (object) array(
+            'items' => 'items',
+            'checkout' => 'Checkout',
         ),
         'navbar' => (object) array(
             'home' => 'Home'
