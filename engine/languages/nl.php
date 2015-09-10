@@ -7,11 +7,11 @@ return (object) array(
             'contact' => 'Contact',
             'deliveryinfo' => 'Bezorg informatie',
             'callus' => 'Bel ons: :phonenumber:',
-            'register' => 'Registreren',
+            'register' => 'Registeren',
             'search' => 'Zoeken',
         ),
         'login' => (object) array(
-            'login' => 'Inloggen',
+            'login' => 'Log in',
             'signin' => 'Inloggen',
             'email' => 'E-mail adres',
             'password' => 'Wachtwoord',
