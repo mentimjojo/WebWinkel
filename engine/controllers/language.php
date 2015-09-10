@@ -42,14 +42,14 @@ class Language {
         foreach($keys as $key) {
             $keystring .= "->".$key;
         }
-        $string = eval("return " . $keystring . ";");
-        foreach($replace as $k=>$v) {
-            $string = str_replace(':'.$k.':', $v, $string);
-        }
-        if($string) {
-            return $string;
+        if(eval("if(isset($keystring)) return true; else return false;")) {
+            $string = eval("return " . $keystring . ";");
+            foreach ($replace as $k => $v) {
+                $string = str_replace(':' . $k . ':', $v, $string);
+            }
+            return string;
         } else {
-            return $pkey;
+            return false;
         }
     }
 
