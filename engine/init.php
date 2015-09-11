@@ -59,8 +59,11 @@ if(isset($_GET['lang']) OR isset($_COOKIE['lang'])) {
 // Create language object
 $lang = new Language($userlang);
 
+// Set current language
+$config->language->current = $userlang;
+
 /**
- * Short function for getting a translated string using the language class
+ * Short function for getting a translated string gusing the language class
  * @param string $key
  */
 function lang($key = '', $replace = array()) {
