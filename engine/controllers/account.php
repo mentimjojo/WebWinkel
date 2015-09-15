@@ -38,7 +38,6 @@ class Account{
         // Return hash
         return $hash;
     }
-
 }
 
 ?>
