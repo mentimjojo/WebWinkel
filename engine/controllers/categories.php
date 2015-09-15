@@ -22,21 +22,36 @@ class Categories {
             $row = (object) $row;
             /** @var integer $id The category id */
             $id = $row->id;
+
+            // Set the categories
+            $categories[$id] = $row;
             // Check if a sub category is set
-            if($row->sub != 0) {
-                /** @var integer $sub The sub category id */
-                $sub = $row->sub;
-                // Check if head exists
-                if(!isset($categories->$sub)) {
-                    // Setting initial head
-                    $categories[$sub] = array();
-                }
-                // Adding the sub category to the object
-                $categories[$sub]['sub'][$id] = $row;
-            } else {
-                // Adding the category to the object
-                $categories[$id] = $row;
-            }
+        }
+        // Putting the categories in the object
+        $this->categories = $categories;
+
+
+    }
+
+    public function setSub() {
+        // Global $config and $database
+        global $config;
+        global $database;
+        // Get config table
+        $query = $database->query("SELECT * FROM " . $config->db_tables->subcategories);
+
+        // Create empty object
+        $categories = array();
+        // While loop for all categories
+        foreach($query->fetchAll() as $row) {
+            /** @var object $row The row as an object */
+            $row = (object) $row;
+            /** @var integer $id The category id */
+            $id = $row->id;
+
+            // Set the categories
+            $categories[$id] = $row;
+            // Check if a sub category is set
         }
         // Putting the categories in the object
         $this->categories = $categories;
@@ -75,6 +90,10 @@ class Categories {
         return (object) $string;
         // The category doesn't exist
         return false;
+    }
+
+    public function getSubs($cat_id = 0) {
+
     }
 
 }
