@@ -68,7 +68,7 @@ class Database {
         // Fetch query
         $result = $query->fetch();
         // Test
-        $config->dbconfig = (object) $result;``
+        $config->dbconfig = (object) $result;
     }
 
     /**
