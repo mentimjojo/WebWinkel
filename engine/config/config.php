@@ -15,7 +15,7 @@ $config = (object) array(
     'theme' => (object) array(
         'name' => 'Download',
         'path' => 'download',
-        'url' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10).'/theme/download'
+        'url' => 'https://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10).'/theme/download'
     ),
     // Debug array
     'debug' => (object) array(

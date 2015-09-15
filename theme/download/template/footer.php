@@ -9,11 +9,10 @@
             <li>
                 <div class="social-ic">
                     <ul>
-                        <li><a href="#"><i class="facebok"> </i></a></li>
-                        <li><a href="#"><i class="twiter"> </i></a></li>
-                        <li><a href="#"><i class="goog"> </i></a></li>
-                        <li><a href="#"><i class="be"> </i></a></li>
-                        <li><a href="#"><i class="pp"> </i></a></li>
+                        <li><a href="https://www.facebook.com/PC4U-893757924006949/timeline/" target="_blank"><i class="facebok"></i></a></li>
+                        <li><a href="https://twitter.com/WebShopPC4U" target="_blank"><i class="twiter"></i></a></li>
+                        <li><a href="https://plus.google.com/u/1/117899834677889755759/about" target="_blank"><i class="goog"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="be"> </i></a></li>
                         <div class="clearfix"></div>
                     </ul>
                 </div>
