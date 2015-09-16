@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="top_right">
                 <ul>
                     <li><a href="#">help</a></li>|
-                    <li><a href="contact.html">Contact</a></li>|
+                    <li><a href="pages/contact.html">Contact</a></li>|
                     <li><a href="#">Delivery information</a></li>
                 </ul>
             </div>
@@ -83,17 +83,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                         <div class="reg">
-                            <a href="register.html">REGISTER</a>
+                            <a href="pages/account/register.php">REGISTER</a>
                         </div>
                         <div class="cart box_1">
-                            <a href="checkout.html">
+                            <a href="pages/checkout.html">
                                 <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="<?=$config->theme->url;?>/images/bag.png" alt=""></h3>
                             </a>
                             <p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
                             <div class="clearfix"> </div>
                         </div>
                         <div class="create_btn">
-                            <a href="checkout.html">CHECKOUT</a>
+                            <a href="pages/checkout.html">CHECKOUT</a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -157,7 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>account</h4>
                                     <ul>
                                         <li><a href="#">login</a></li>
-                                        <li><a href="register.html">create an account</a></li>
+                                        <li><a href="pages/account/register.php">create an account</a></li>
                                         <li><a href="women.html">create wishlist</a></li>
                                         <li><a href="women.html">my shopping bag</a></li>
                                         <li><a href="women.html">brands</a></li>
@@ -248,7 +248,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>account</h4>
                                     <ul>
                                         <li><a href="#">login</a></li>
-                                        <li><a href="register.html">create an account</a></li>
+                                        <li><a href="pages/account/register.php">create an account</a></li>
                                         <li><a href="women.html">create wishlist</a></li>
                                         <li><a href="women.html">my shopping bag</a></li>
                                         <li><a href="women.html">brands</a></li>
@@ -339,7 +339,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>account</h4>
                                     <ul>
                                         <li><a href="#">login</a></li>
-                                        <li><a href="register.html">create an account</a></li>
+                                        <li><a href="pages/account/register.php">create an account</a></li>
                                         <li><a href="women.html">create wishlist</a></li>
                                         <li><a href="women.html">my shopping bag</a></li>
                                         <li><a href="women.html">brands</a></li>
@@ -430,7 +430,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>account</h4>
                                     <ul>
                                         <li><a href="#">login</a></li>
-                                        <li><a href="register.html">create an account</a></li>
+                                        <li><a href="pages/account/register.php">create an account</a></li>
                                         <li><a href="women.html">create wishlist</a></li>
                                         <li><a href="women.html">my shopping bag</a></li>
                                         <li><a href="women.html">brands</a></li>
@@ -522,7 +522,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>account</h4>
                                     <ul>
                                         <li><a href="#">login</a></li>
-                                        <li><a href="register.html">create an account</a></li>
+                                        <li><a href="pages/account/register.php">create an account</a></li>
                                         <li><a href="women.html">create wishlist</a></li>
                                         <li><a href="women.html">my shopping bag</a></li>
                                         <li><a href="women.html">brands</a></li>
@@ -614,7 +614,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>account</h4>
                                     <ul>
                                         <li><a href="#">login</a></li>
-                                        <li><a href="register.html">create an account</a></li>
+                                        <li><a href="pages/account/register.php">create an account</a></li>
                                         <li><a href="women.html">create wishlist</a></li>
                                         <li><a href="women.html">my shopping bag</a></li>
                                         <li><a href="women.html">brands</a></li>
@@ -705,7 +705,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>account</h4>
                                     <ul>
                                         <li><a href="#">login</a></li>
-                                        <li><a href="register.html">create an account</a></li>
+                                        <li><a href="pages/account/register.php">create an account</a></li>
                                         <li><a href="women.html">create wishlist</a></li>
                                         <li><a href="women.html">my shopping bag</a></li>
                                         <li><a href="women.html">brands</a></li>
@@ -762,7 +762,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>NEW ARRIVALS</h3>
                     <p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
                     <div class="crt-btn">
-                        <a href="details.html">TAKE A LOOK</a>
+                        <a href="pages/details.html">TAKE A LOOK</a>
                     </div>
                 </div>
             </div>
@@ -772,7 +772,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>TUXEDO</h3>
                     <p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
                     <div class="crt-btn">
-                        <a href="details.html">SHOP NOW</a>
+                        <a href="pages/details.html">SHOP NOW</a>
                     </div>
                 </div>
             </div>
@@ -785,14 +785,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>SWEATER</h3>
                     <p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
                     <div class="crt-btn">
-                        <a href="details.html">SHOP NOW</a>
+                        <a href="pages/details.html">SHOP NOW</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 arriv-right1">
                 <img src="<?=$config->theme->url;?>/images/4.jpg" class="img-responsive" alt="">
                 <div class="arriv-info2">
-                    <a href="details.html"><h3>Trekking Shoes<i class="ars"></i></h3></a>
+                    <a href="pages/details.html"><h3>Trekking Shoes<i class="ars"></i></h3></a>
                 </div>
             </div>
             <div class="clearfix"> </div>
@@ -801,7 +801,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-4 arriv-left2">
                 <img src="<?=$config->theme->url;?>/images/5.jpg" class="img-responsive" alt="">
                 <div class="arriv-info2">
-                    <a href="details.html"><h3>Casual Glasses<i class="ars"></i></h3></a>
+                    <a href="pages/details.html"><h3>Casual Glasses<i class="ars"></i></h3></a>
                 </div>
             </div>
             <div class="col-md-4 arriv-middle">
@@ -809,14 +809,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="arriv-info3">
                     <h3>FRESH LOOK T-SHIRT</h3>
                     <div class="crt-btn">
-                        <a href="details.html">SHOP NOW</a>
+                        <a href="pages/details.html">SHOP NOW</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 arriv-right2">
                 <img src="<?=$config->theme->url;?>/images/7.jpg" class="img-responsive" alt="">
                 <div class="arriv-info2">
-                    <a href="details.html"><h3>Elegant Watches<i class="ars"></i></h3></a>
+                    <a href="pages/details.html"><h3>Elegant Watches<i class="ars"></i></h3></a>
                 </div>
             </div>
             <div class="clearfix"> </div>
@@ -829,7 +829,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="specia-top">
             <ul class="grid_2">
                 <li>
-                    <a href="details.html"><img src="<?=$config->theme->url;?>/images/8.jpg" class="img-responsive" alt=""></a>
+                    <a href="pages/details.html"><img src="<?=$config->theme->url;?>/images/8.jpg" class="img-responsive" alt=""></a>
                     <div class="special-info grid_1 simpleCart_shelfItem">
                         <h5>Lorem ipsum dolor</h5>
                         <div class="item_add"><span class="item_price"><h6>ONLY $40.00</h6></span></div>
@@ -837,7 +837,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </li>
                 <li>
-                    <a href="details.html"><img src="<?=$config->theme->url;?>/images/9.jpg" class="img-responsive" alt=""></a>
+                    <a href="pages/details.html"><img src="<?=$config->theme->url;?>/images/9.jpg" class="img-responsive" alt=""></a>
                     <div class="special-info grid_1 simpleCart_shelfItem">
                         <h5>Consectetur adipis</h5>
                         <div class="item_add"><span class="item_price"><h6>ONLY $60.00</h6></span></div>
@@ -845,7 +845,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </li>
                 <li>
-                    <a href="details.html"><img src="<?=$config->theme->url;?>/images/10.jpg" class="img-responsive" alt=""></a>
+                    <a href="pages/details.html"><img src="<?=$config->theme->url;?>/images/10.jpg" class="img-responsive" alt=""></a>
                     <div class="special-info grid_1 simpleCart_shelfItem">
                         <h5>Commodo consequat</h5>
                         <div class="item_add"><span class="item_price"><h6>ONLY $14.00</h6></span></div>
@@ -853,7 +853,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </li>
                 <li>
-                    <a href="details.html"><img src="<?=$config->theme->url;?>/images/11.jpg" class="img-responsive" alt=""></a>
+                    <a href="pages/details.html"><img src="<?=$config->theme->url;?>/images/11.jpg" class="img-responsive" alt=""></a>
                     <div class="special-info grid_1 simpleCart_shelfItem">
                         <h5>Voluptate velit</h5>
                         <div class="item_add"><span class="item_price"><h6>ONLY $37.00</h6></span></div>
@@ -919,11 +919,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li><a href="#">Our Stories</a></li>
             <li><a href="#">Press</a></li>
             <li><a href="#">Career</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
         </div>
         <div class="col-md-2 myac">
             <h4>MY ACCOUNT</h4>
-            <li><a href="register.html">Register</a></li>
+            <li><a href="pages/account/register.php">Register</a></li>
             <li><a href="#">My Cart</a></li>
             <li><a href="#">Order History</a></li>
             <li><a href="buy.html">Payment</a></li>

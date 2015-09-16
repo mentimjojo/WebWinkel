@@ -31,13 +31,13 @@ class Theme{
         // Check if page exists
         if(empty($_GET['page'])){
             // Require home page
-            require $config->path->basedir . '/theme/' . $config->theme->path . '/home.php';
+            require $config->path->basedir . '/theme/' . $config->theme->path . '/pages/home.php';
         } else {
             // Make page
             $page = $_GET['page'].'.php';
             // Check if exits
-            if (file_exists($config->path->basedir . '/theme/' . $config->theme->path . '/' . $page)) {
-                require $config->path->basedir . '/theme/' . $config->theme->path . '/' . $page;
+            if (file_exists($config->path->basedir . '/theme/' . $config->theme->path . '/pages/' . $page)) {
+                require $config->path->basedir . '/theme/' . $config->theme->path . '/pages/' . $page;
             } else {
                 if($config->debug->errors){
                     // Show all errors
