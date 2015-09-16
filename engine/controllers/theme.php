@@ -8,7 +8,15 @@ class Theme{
         // Global config
         global $config;
         global $categories;
-        // Load theme
+        global $theme;
+    }
+
+    public function getTheme(){
+        // Global config
+        global $config;
+        global $categories;
+        global $theme;
+        // Requiere theme
         require $config->path->basedir . '/theme/' . $config->theme->path . '/index.php';
     }
 
@@ -19,6 +27,7 @@ class Theme{
         // Global config
         global $config;
         global $categories;
+        global $theme;
         // Check if page exists
         if(empty($_GET['page'])){
             // Require home page

@@ -75,4 +75,7 @@ $categories = new Categories();
 
 // Create theme object
 $theme = new Theme();
+
+// Get theme
+$theme->getTheme();
 ?>

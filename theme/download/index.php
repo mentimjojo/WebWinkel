@@ -1,11 +1,17 @@
-
 <?php
+/**
+ * Get header
+ */
 require 'template/header.php';
-?>
 
-Content
+/**
+ * Get content
+ */
+$theme->PageSystem();
 
-<?php
+/**
+ * Get footer
+ */
 require 'template/footer.php';
 ?>
 
