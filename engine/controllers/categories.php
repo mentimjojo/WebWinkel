@@ -100,7 +100,8 @@ class Categories {
     }
 
     public function getSubs($cat_id = 0) {
-
+        // Global config
+        global $config;
     }
 
 }
