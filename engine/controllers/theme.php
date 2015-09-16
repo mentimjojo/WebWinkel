@@ -40,6 +40,8 @@ class Theme{
                 require $config->path->basedir . '/theme/' . $config->theme->path . '/pages/' . $page;
             } else {
                 if($config->debug->errors){
+                    // Send error
+                    echo "<center>Tise page doesn't exists.3</center>";
                     // Show all errors
                     $config->debug->getErrors[] = "An page error with the following information: " . $page;
                 } else {

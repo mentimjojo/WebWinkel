@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                         <div class="reg">
-                            <a href="register.html"><?=lang('header.register')?></a>
+                            <a href="<?=$config->path->basepath;?>/account/register"><?=lang('header.register')?></a>
                         </div>
                         <div class="cart box_1">
                             <a href="<?=$config->theme->url;?>/checkout.html">
@@ -109,7 +109,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <!-- start header menu -->
             <ul class="megamenu skyblue">
-                <li class="active grid"><a class="color1" href="index.php">Home</a></li>
+                <li class="active grid"><a class="color1" href="<?=$config->path->basepath;?>/home">Home</a></li>
                 <li class="grid"><a class="color2" href="#"><?=$categories->getOne('1')->name?></a>
                     <div class="megapanel">
                         <div class="row">
