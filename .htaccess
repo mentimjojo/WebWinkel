@@ -1,6 +1,8 @@
 ## Set engine on
 RewriteEngine On
 
+RewriteRule ^/ index.php?page=home$1
+
 ## Rewrite home
 RewriteRule ^home/(.*) index.php?page=home$1
 
