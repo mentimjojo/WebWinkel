@@ -2,12 +2,18 @@
 class Categories {
 
     /** @var object list of categories */
-    private $categories;
+    public $categories;
+    public $subcategories;
 
     /**
      * Constructor for Categories
      */
     public function __construct() {
+        $this->setCat();
+        $this->setSub();
+    }
+
+    public function setCat() {
         // Global $config and $database
         global $config;
         global $database;
@@ -29,8 +35,6 @@ class Categories {
         }
         // Putting the categories in the object
         $this->categories = $categories;
-
-
     }
 
     public function setSub() {
@@ -41,7 +45,7 @@ class Categories {
         $query = $database->query("SELECT * FROM " . $config->db_tables->subcategories);
 
         // Create empty object
-        $categories = array();
+        $subcategories = array();
         // While loop for all categories
         foreach($query->fetchAll() as $row) {
             /** @var object $row The row as an object */
@@ -50,11 +54,11 @@ class Categories {
             $id = $row->id;
 
             // Set the categories
-            $categories[$id] = $row;
+            $subcategories[$id] = $row;
             // Check if a sub category is set
         }
         // Putting the categories in the object
-        $this->categories = $categories;
+        $this->subcategories = $subcategories;
     }
 
     /**
@@ -62,7 +66,10 @@ class Categories {
      * @return object
      */
     public function getAll() {
-        return $this->categories;
+        return (object) array(
+            'categories' => $this->categories,
+            'sub' => $this->subcategories
+        );
     }
 
     /**
