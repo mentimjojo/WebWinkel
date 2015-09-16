@@ -15,6 +15,29 @@ class Account{
         $this->db = $database;
     }
 
+    /**
+     * Register a user
+     * @email email from user
+     * @password password from user
+     * @password_r password repeat from user
+     * @first_name First name from user
+     * @insertion insertion from user
+     * @last_name from user
+     */
+    public function registerUser($data = (object) array()){
+        // Check if al field is empty
+
+    }
+
+    /**
+     * Log in an user
+     * @email email from user
+     * @password from user
+     */
+    public function loginUser($email, $password){
+
+    }
+
 
     /**
      * Make password hash
@@ -38,7 +61,6 @@ class Account{
         // Return hash
         return $hash;
     }
-
 }
 
 ?>
