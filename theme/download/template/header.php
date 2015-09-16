@@ -38,7 +38,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul>
                     <li><a href="#"><?=lang('header.help')?></a></li>|
                     <li><a href="contact.html"><?=lang('header.contact')?></a></li>|
-                    <li><a href="#"><?=lang('header.deliveryinfo')?></a></li>
+                    <li><a href="#"><?=lang('header.deliveryinfo')?></a></li>|
+                    <li><a href="&lang=en"><img src="<?=$config->theme->url;?>/images/language/us.png" /></a></li>
+                    <li><a href="&lang=nl"><img src="<?=$config->theme->url;?>/images/language/nl.png" /></a></li>
                 </ul>
             </div>
             <div class="top_left">
@@ -83,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                         <div class="reg">
-                            <a href="<?=$config->path->basepath;?>/account/register"><?=lang('header.register')?></a>
+                            <a href="<?=$config->path->basepath;?>/account/register/"><?=lang('header.register')?></a>
                         </div>
                         <div class="cart box_1">
                             <a href="<?=$config->theme->url;?>/checkout.html">
@@ -109,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <!-- start header menu -->
             <ul class="megamenu skyblue">
-                <li class="active grid"><a class="color1" href="<?=$config->path->basepath;?>/home">Home</a></li>
+                <li class="active grid"><a class="color1" href="<?=$config->path->basepath;?>/home/">Home</a></li>
                 <li class="grid"><a class="color2" href="#"><?=$categories->getOne('1')->name?></a>
                     <div class="megapanel">
                         <div class="row">
