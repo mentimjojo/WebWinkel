@@ -51,7 +51,7 @@ class Categories {
             /** @var object $row The row as an object */
             $row = (object) $row;
             /** @var integer $id The category id */
-            $id = $row->id;
+            $id = $row->sub_id;
 
             // Set the categories
             $subcategories[$id] = $row;
