@@ -10,5 +10,8 @@ RewriteRule ^account/register/(.*) index.php?page=account/register$1
 ## Details page
 RewriteRule ^product/details/(.*) index.php?page=product/details$1
 
+## Cart page
+RewriteRule ^cart/(.*) index.php?page=cart/cart$1
+
 ## Add error document
 ErrorDocument 404 http://cylosix.nl/Webwinkel/home/&error=404/

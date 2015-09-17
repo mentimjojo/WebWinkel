@@ -88,14 +88,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="<?=$config->path->basepath;?>/account/register/"><?=lang('header.register')?></a>
                         </div>
                         <div class="cart box_1">
-                            <a href="<?=$config->theme->url;?>/checkout.html">
+                            <a href="<?=$config->path->basepath;?>/cart/">
                                 <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> <?=lang('cart.items')?>)<img src="<?=$config->theme->url;?>/images/bag.png" alt=""></h3>
                             </a>
                             <p><a href="javascript:;" class="simpleCart_empty"><?=lang('cart.empty')?></a></p>
                             <div class="clearfix"> </div>
                         </div>
                         <div class="create_btn">
-                            <a href="<?=$config->theme->url;?>/checkout.html"><?=lang('cart.checkout')?></a>
+                            <a href="<?=$config->path->basepath;?>/cart/"><?=lang('cart.checkout')?></a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>

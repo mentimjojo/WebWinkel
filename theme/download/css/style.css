@@ -192,7 +192,7 @@ a.order:hover{
 a.cpns{
 	background:#E86024;
 	color:#fff;
-	
+
 	padding: 10px;
   font-size: 0.8em;
 	font-weight:600;
@@ -204,7 +204,7 @@ a.cpns:hover{
 	font-size:0.9em;
 	font-weight:400;
 	margin-top:1em;
-	color:#727272;	
+	color:#727272;
 }
 .total-item p a:hover{
 	color:#333;
@@ -213,12 +213,12 @@ a.cpns:hover{
 a.continue{
 	background:#00405d;
 	padding:10px 20px;
-	
+
 	font-size:1em;
 	color:#fff;
 	text-decoration:none;
 	display: block;
-   font-weight: 600;  
+   font-weight: 600;
    text-align: center;
    margin-bottom:2em;
 }
@@ -233,7 +233,7 @@ ul.total_price{
 ul.total_price li.last_price{
 	width: 50%;
   float: left;
-  
+
 }
 ul.total_price li.last_price span{
 	font-size: 1.1em;
@@ -251,7 +251,7 @@ ul.total_price li.last_price span{
 .price-details span{
 	width: 50%;
   float: left;
- 
+
   font-size: 0.8125em;
   color: #000;
   line-height: 1.8em;
@@ -385,7 +385,7 @@ ul.qty li p{
   text-align: center;
 }
 .item_add:hover{
-}	
+}
 .grid_1 img{
 	margin-bottom:1em;
 }
@@ -450,8 +450,8 @@ select.item_Size {
   font-weight: 300;
 }
 /* Login Button */
-#loginButton { 
-    display:inline-block;  
+#loginButton {
+    display:inline-block;
     position:relative;
     z-index:30;
     cursor:pointer;
@@ -602,7 +602,7 @@ input:focus {
 	position: relative;
 	font-size: 0.8725em;
 	-webkit-appearance: none;
-	text-transform: capitalize;
+	  
 }
 .search input[type="text"]:hover{
 	background: #ffffff;
@@ -633,7 +633,7 @@ input:focus {
   width: 21%;
 }
 .create_btn a {
-  text-transform: capitalize;
+    
   display: inline-block;
   padding: 6px 16px;
   font-size: 0.8725em;
@@ -647,7 +647,7 @@ input:focus {
 }
 .create_btn a:hover{
 	background: #00405d;
-	color:#ffffff; 
+	color:#ffffff;
 	text-decoration:none;
 }
 .create_btn a img{
@@ -742,12 +742,12 @@ ul.icon1 {
 	-moz-border-top-left-radius: 5px;
 	-o-border-top-left-radius: 5px;
 }
-.icon1 ul li:last-child {   
+.icon1 ul li:last-child {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-	box-shadow: none;    
+	box-shadow: none;
 }
-.icon1 ul a {    
+.icon1 ul a {
 	_height: 10px; /*IE6 only*/
 	white-space: nowrap;
 	float: none;
@@ -769,7 +769,7 @@ ul.icon1 {
 	left: -100px;
 	top: 0%;
 	margin-top: -6px;
-	border-left: 0;	
+	border-left: 0;
 	border-bottom:20px solid transparent;
 	border-top: 20px solid transparent;
 	border-right:20px solid #323757;
@@ -849,7 +849,7 @@ ul.megamenu.skyblue {
 	display: block;
 	font-size: 0.95em;
 	color: #555;
-	text-transform: capitalize;
+	  
 	line-height: 1.8em;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -907,7 +907,7 @@ ul.megamenu.skyblue {
   margin: 0.5em 0;
 }
 .crt-btn a {
-  text-transform: capitalize;
+    
   display: inline-block;
   padding: 6px 16px;
   font-size: 0.8725em;
@@ -1173,7 +1173,7 @@ display:block;
   width: 33.33%;
 }
 .cr_btn a {
-  text-transform: capitalize;
+    
   display: inline-block;
   padding: 3px 25px;
   font-size: 0.9em;
@@ -1187,7 +1187,7 @@ display:block;
   text-decoration:none;
 }
 .cr_btn1 a {
-  text-transform: capitalize;
+    
   display: inline-block;
   padding: 2px 23px;
   font-size: 0.9em;
@@ -1456,7 +1456,7 @@ list-style: none;
 	line-height: 27px;
 	color: #555555;
 	cursor: pointer;
-	text-transform: capitalize;
+	  
 	font-weight: normal;
 	margin-top: 0;
 }
@@ -1561,7 +1561,7 @@ list-style: none;
 	-webkit-transition: border-color 0.3s;
 }
 .sky-form .toggle i:before {
-	background-color: #2da5da;	
+	background-color: #2da5da;
 }
 /* hover state */
 .sky-form .input:hover input,
@@ -1586,7 +1586,7 @@ list-style: none;
 }
 /* checked state */
 .sky-form .radio input + i:after {
-	background-color: #E86024;	
+	background-color: #E86024;
 }
 .sky-form .checkbox input + i:after {
 	color: #2da5da;
@@ -1738,7 +1738,7 @@ list-style: none;
 .w_nav li a{
 	display: block;
 	color:#555555;
-	text-transform:capitalize;
+	 
 }
 .w_nav li a:hover{
 	color: #00405d;
@@ -1908,7 +1908,7 @@ span.brand {
 	display: block;
 	float:right;
 	margin-left:3.333%;
-} 	
+}
 .span_2_of_bottom {
 	width: 66.1%;
 }
@@ -2073,7 +2073,7 @@ p.product_descr {
 .desc1 h3{
 	color:#333333;
 	font-size:1.4em;
-	text-transform:capitalize;
+	 
 }
 .desc1 p {
   margin-top: 2%;
@@ -2175,7 +2175,6 @@ p.product_descr {
 .registration h2{
 	font-size:1.5em;
 	color: #00405d;
-	text-transform:capitalize;
 	margin-bottom: 4%;
 }
 .reg_fb {
@@ -2198,7 +2197,7 @@ p.product_descr {
 	padding: 12px 16px;
 	display: inline-block;
 	font-size: 1.3em;
-	text-transform: capitalize;
+	  
 	font-style: normal;
 }
 .reg_fb:hover {
@@ -2249,7 +2248,7 @@ label {
 	font-size: 0.8925em;
 	color: #333333;
 	-webkit-appearance: none;
-	text-transform: capitalize;
+	  
 	background: #FFFFFF;
 	border: 1px solid rgb(231, 231, 231);
 	font-weight: normal;
@@ -2258,7 +2257,7 @@ label {
 	-webkit-appearance: none;
 	font-family: 'Open Sans', sans-serif;
 	color: #ffffff;
-	text-transform: capitalize;
+	  
 	display: inline-block;
 	background: #E86024;
 	padding: 10px 20px;
@@ -2278,14 +2277,13 @@ label {
 }
 .terms{
 	text-decoration:underline;
-	text-transform:capitalize;
 	color: #00405d;
 }
 .terms:hover{
 	text-decoration:none;
 }
 .forget a{
-	text-transform: capitalize;
+	  
 	color: #999999;
 	text-decoration: underline;
 	font-size: 0.8925em;
@@ -2306,7 +2304,7 @@ label {
 	margin: 13px 0 0;
 }
 .shoping_bag h4 img{
-	
+
 	margin-right: 5px;
 }
 .shoping_bag h4 span{
@@ -2359,7 +2357,7 @@ label {
 	transition: all 0.3s ease-in-out;
 }
 .shoping_left h4 a:hover{
-	text-decoration: none;	
+	text-decoration: none;
 	color: #777777;
 }
 .shoping_left span{
@@ -2373,7 +2371,7 @@ label {
 	font-weight: 600;
 }
 .s_icons{
-	margin-top: 2%;	
+	margin-top: 2%;
 }
 ul.s_icons{
 	padding:0;
@@ -2411,7 +2409,7 @@ ul.s_icons{
 .shoping_right p{
 	color: #333333;
 	font-size: 0.8725em;
-	text-transform: capitalize;
+	  
 	line-height: 2.5em;
 	-webkit-text-stroke: 0.4px;
 }
@@ -2459,7 +2457,7 @@ ul.s_icons{
 }
 .shoping_left a.btn1{
 	margin-top:1%;
-	text-transform: capitalize;
+	  
 	display: inline-block;
 	padding: 10px 20px;
 	font-size: 1.2em;
@@ -2507,7 +2505,7 @@ p.cart a {
 	font-size: 1.5em;
 	color: #00405d;
 	text-shadow: 0 1px 0 #ffffff;
-	text-transform: capitalize;
+	  
 }
 .map{
 	margin: 2% 2% 2% 0;
@@ -2527,7 +2525,7 @@ p.cart a {
 	display: block;
 	font-size: 0.8725em;
 	padding-bottom: 5px;
-	text-transform: capitalize;
+	  
 	font-weight: normal;
 }
 .contact-form input[type="text"], .contact-form textarea {
@@ -2540,11 +2538,11 @@ p.cart a {
 	width: 96.3333%;
 	outline: none;
 	-webkit-appearance: none;
-	text-transform: capitalize;
+	  
 }
 .contact-form textarea{
 	resize:none;
-	height:120px;		
+	height:120px;
 }
 .contact-form input[type="submit"]{
 	margin-top: 10px;

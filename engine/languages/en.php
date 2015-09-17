@@ -18,6 +18,10 @@ return (object) array(
             'remember' => 'Remember me',
             'forgot' => 'Forgot your password?'
         ),
+        'register' => (object) array(
+            'title_register' => 'Not a customer yet?',
+            'title_login' => 'Already a customer?'
+        ),
         'cart' => (object) array(
             'items' => 'items',
             'checkout' => 'Checkout',

@@ -4,7 +4,7 @@
 	<!-- start registration -->
 	<div class="registration">
 		<div class="registration_left">
-		<h2>new user? <span> create an account </span></h2>
+		<h2><?=lang('register.title_register');?></h2>
 		<!-- [if IE] 
 		    < link rel='stylesheet' type='text/css' href='ie.css'/>  
 		 [endif] -->  
@@ -98,7 +98,7 @@
 		</div>
 	</div>
 	<div class="registration_left">
-		<h2>existing user</h2>
+		<h2><?=lang('register.title_login');?></h2>
 		 <div class="registration_form">
 		 <!-- Form -->
 			<form id="registration_form" action="contact.php" method="post">
