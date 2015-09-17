@@ -116,7 +116,10 @@ class Categories {
         if (!isset($this->subcategories[$sub_id])) {
             return (object)array();
         } else {
-            return $this->subcategories[$sub_id];
+            $string = (array) $this->subcategories[$sub_id];
+            // Set ->name to equal current lang
+            $string->name = $string['name_'.$config->language->current];
+            return (object) $string;
         }
     }
 }
