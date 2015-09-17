@@ -1,10 +1,9 @@
 ## Set engine on
 RewriteEngine On
 
-RewriteRule ^/ index.php?page=home$1
-
 ## Rewrite home
 RewriteRule ^home/(.*) index.php?page=home$1
 
 ## Rewrites for account elements
 RewriteRule ^account/register/(.*) index.php?page=account/register$1
+

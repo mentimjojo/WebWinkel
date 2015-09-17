@@ -30,8 +30,10 @@ class Theme{
         global $theme;
         // Check if page exists
         if(empty($_GET['page'])){
-            // Require home page
-            require $config->path->basedir . '/theme/' . $config->theme->path . '/pages/home.php';
+            // Send to home
+            echo '<script type="text/javascript">
+                    window.location = "' . $config->path->basepath . '/home/"
+                  </script>';
         } else {
             // Make page
             $page = $_GET['page'].'.php';
@@ -41,7 +43,7 @@ class Theme{
             } else {
                 if($config->debug->errors){
                     // Send error
-                    echo "<center>Tise page doesn't exists.3</center>";
+                    echo "<center>This page doesn't exists.3</center>";
                     // Show all errors
                     $config->debug->getErrors[] = "An page error with the following information: " . $page;
                 } else {
