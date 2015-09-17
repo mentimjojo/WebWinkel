@@ -7,5 +7,8 @@ RewriteRule ^home/(.*) index.php?page=home$1
 ## Rewrites for account elements
 RewriteRule ^account/register/(.*) index.php?page=account/register$1
 
+## Details page
+RewriteRule ^product/details/(.*) index.php?page=product/details$1
+
 ## Add error document
 ErrorDocument 404 http://cylosix.nl/Webwinkel/home/&error=404/
