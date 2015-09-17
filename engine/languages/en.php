@@ -28,6 +28,10 @@ return (object) array(
         ),
         'welcome' => 'Welcome to PC4U',
         'footer' => (object) array(
+            'newsletter' => (object) array(
+                'placeholder' => 'Enter your email to join our newsletter',
+                'join' => 'Join'
+            ),
             'care' => (object) array(
                 'title' => 'Customer Care',
                 'help' => 'Help center',

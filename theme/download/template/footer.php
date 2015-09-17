@@ -23,12 +23,12 @@
             <div class="stay">
                 <div class="stay-left">
                     <form>
-                        <input type="text" placeholder="Enter your email to join our newsletter" required="">
+                        <input type="text" placeholder="<?=lang('footer.newsletter.placeholder');?>" required="">
                     </form>
                 </div>
                 <div class="btn-1">
                     <form>
-                        <input type="submit" value="join">
+                        <input type="submit" value="<?=lang('footer.newsletter.join');?>">
                     </form>
                 </div>
                 <div class="clearfix"> </div>
