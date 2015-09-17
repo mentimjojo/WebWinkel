@@ -117,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="row">
                             <div class="col1">
                                 <div class="h_nav">
-                                    <h4><?=$categories->getOneSub('1');?></h4>
+                                    <h4><?=$categories->getOneSub('1')->name;?></h4>
                                     <ul>
                                         <li><a href="women.html">new arrivals</a></li>
                                         <li><a href="women.html">men</a></li>
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="col1">
                                 <div class="h_nav">
-                                    <h4><?=$categories->getOneSub('2');?></h4>
+                                    <h4><?=$categories->getOneSub('2')->name;?></h4>
                                     <ul>
                                         <li><a href="women.html">new arrivals</a></li>
                                         <li><a href="women.html">men</a></li>

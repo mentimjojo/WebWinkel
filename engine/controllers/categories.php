@@ -114,11 +114,13 @@ class Categories {
     {
         global $config;
         if (!isset($this->subcategories[$sub_id])) {
+            // Return array
             return (object)array();
         } else {
             $string = (array) $this->subcategories[$sub_id];
             // Set ->name to equal current lang
             $this->subcategories[$sub_id]->name = $string['name_'.$config->language->current];
+            // Return object
             return (object) $this->subcategories[$sub_id];
         }
     }
