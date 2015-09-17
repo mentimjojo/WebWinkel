@@ -56,8 +56,8 @@
             <?php if(isset($_SESSION['login.id'])){?>
                 <li><a href="#"><?=lang('footer.account.history');?></a></li>
             <?php } else { ?>
-                <li><a href="#"><?=lang('footer.account.register');?></a></li>
-                <li><a href="#"><?=lang('footer.account.login');?></a></li>
+                <li><a href="<?=$config->path->basepath;?>/account/register/"><?=lang('footer.account.register');?></a></li>
+                <li><a href="<?=$config->path->basepath;?>/account/register/"><?=lang('footer.account.login');?></a></li>
             <?php } ?>
             <li><a href="#"><?=lang('footer.account.cart');?></a></li>
 

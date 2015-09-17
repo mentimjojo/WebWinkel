@@ -9,6 +9,7 @@ class Theme{
         global $config;
         global $categories;
         global $theme;
+        global $account;
     }
 
     public function getTheme(){
@@ -16,6 +17,7 @@ class Theme{
         global $config;
         global $categories;
         global $theme;
+        global $account;
         // Requiere theme
         require $config->path->basedir . '/theme/' . $config->theme->path . '/index.php';
     }

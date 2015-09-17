@@ -86,12 +86,12 @@
 					<label>
 						<input placeholder="retype password" type="password" tabindex="4" required>
 					</label>
-				</div>	
-				<div>
-					<input type="submit" value="create an account" id="register-submit">
 				</div>
 				<div class="sky-form">
 					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>I agree to <?=$config->dbconfig->title;?> &nbsp;<a class="terms" href="#"> terms of service</a> </label>
+				</div>
+				<div>
+					<input type="submit" value="create an account" id="register-submit">
 				</div>
 			</form>
 			<!-- /Form -->

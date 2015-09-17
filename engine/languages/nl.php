@@ -41,7 +41,7 @@ return (object) array(
             ),
             'about' => (object) array(
                 'title' => 'Over ons',
-                'history' => 'Geschiendenis',
+                'history' => 'Geschiedenis',
                 'career' => 'Vacatures'
             ),
             'account' => (object) array(
