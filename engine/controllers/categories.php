@@ -54,6 +54,7 @@ class Categories {
             $id = $row->sub_id;
 
             // Set the categories
+            $subcategories['cat'][$row->cat_id][$id] = $row;
             $subcategories[$id] = $row;
             // Check if a sub category is set
         }
@@ -99,9 +100,23 @@ class Categories {
         return false;
     }
 
-    public function getSubs($cat_id = 0) {
+    public function getAllSub($cat_id = 0)
+    {
         // Global config
         global $config;
+        if (!isset($this->subcategories['cat'][$cat_id])) {
+            return (object)array();
+        } else {
+            return $this->subcategories['cat'][$cat_id];
+        }
     }
-
+    public function getOneSub($sub_id = 0)
+    {
+        global $config;
+        if (!isset($this->subcategories[$sub_id])) {
+            return (object)array();
+        } else {
+            return $this->subcategories[$sub_id];
+        }
+    }
 }
