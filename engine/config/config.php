@@ -4,7 +4,7 @@ $config = (object) array(
     // Path objects
     'path' => (object) array(
         'basedir' => __DIR__ . '/../../',
-        'basepath' => 'http://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10)
+        'basepath' => 'https://'.$_SERVER['SERVER_NAME'].substr($_SERVER["SCRIPT_NAME"], 0, -10)
     ),
     // Language
     'language' => (object) array(
