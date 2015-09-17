@@ -91,7 +91,7 @@
 					<input type="submit" value="create an account" id="register-submit">
 				</div>
 				<div class="sky-form">
-					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>i agree to shoppe.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
+					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>I agree to <?=$config->dbconfig->title;?> &nbsp;<a class="terms" href="#"> terms of service</a> </label>
 				</div>
 			</form>
 			<!-- /Form -->
