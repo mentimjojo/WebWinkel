@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="search">
                         <form>
-                            <input type="text" value="" placeholder="search...">
+                            <input type="text" value="" placeholder="<?=lang('header.search');?>">
                             <input type="submit" value="">
                         </form>
                     </div>

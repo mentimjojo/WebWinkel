@@ -10,6 +10,7 @@ class Theme{
         global $categories;
         global $theme;
         global $account;
+        global $mailer;
     }
 
     public function getTheme(){
@@ -18,6 +19,7 @@ class Theme{
         global $categories;
         global $theme;
         global $account;
+        global $mailer;
         // Requiere theme
         require $config->path->basedir . '/theme/' . $config->theme->path . '/index.php';
     }
@@ -30,6 +32,8 @@ class Theme{
         global $config;
         global $categories;
         global $theme;
+        global $account;
+        global $mailer;
         // Check if page exists
         if(empty($_GET['page'])){
             // Send to home

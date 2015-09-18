@@ -71,7 +71,14 @@ function lang($key = '', $replace = array()) {
     echo $lang->get($key, $replace);
 }
 
+// Register categories
 $categories = new Categories();
+
+// Register mailer class
+$mailer = new Mailer();
+
+// Register account
+$account = new Account();
 
 // Create theme object
 $theme = new Theme();

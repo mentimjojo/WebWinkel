@@ -8,7 +8,7 @@ return (object) array(
             'deliveryinfo' => 'Bezorg informatie',
             'callus' => 'Bel ons: :phonenumber:',
             'register' => 'Registeren',
-            'search' => 'Zoeken',
+            'search' => 'Zoeken...',
         ),
         'login' => (object) array(
             'login' => 'Log in',
@@ -17,6 +17,27 @@ return (object) array(
             'password' => 'Wachtwoord',
             'remember' => 'Onthoud gegevens',
             'forgot' => 'Wachtwoord vergeten'
+        ),
+        'register' => (object) array(
+            'title' => 'Nog geen klant?',
+            'first_name' => 'Voornaam',
+            'insertion' => 'Tussenvoegsel',
+            'last_name' => 'Achternaam',
+            'email' => 'Email adres',
+            'gender_m' => 'Man',
+            'gender_v' => 'Vrouw',
+            'gender_un' => 'Ongespecificeerd',
+            'password' => 'Wachtwoord',
+            'password_r' => 'Herhaal wachtwoord',
+            'terms' => 'Ik ga akkoord met :name: <a class="terms" href="#"> algemene voorwaarden</a>.',
+            'button' => 'Maak account',
+            'login' => (object) array(
+                'title' => 'Al klant?',
+                'email' => 'Email',
+                'password' => 'Wachtwoord',
+                'signin' => 'Login',
+                'forgotpass' => 'Wachtwoord vergeten?'
+            )
         ),
         'cart' => (object) array(
             'items' => 'producten',
