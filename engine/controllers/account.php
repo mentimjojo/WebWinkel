@@ -65,6 +65,10 @@ class Account{
             $this->mailer->setMessage(true, $lang->get('register.emails.msg', array('name' => $data->first_name)));
 
             $this->mailer->sendMail();
+            // Start session
+            $_SESSION['login_status'] = 1;
+            // set hash in session
+            $_SESSION['login_hash'] = $user_hash;
             // Return 1
             return 1;
         }
@@ -76,6 +80,14 @@ class Account{
      * @password from user
      */
     public function loginUser($email, $password){
+
+    }
+
+    /**
+     * Password forget
+     * @Email email from user
+     */
+    public function forgotPassword($email){
 
     }
 

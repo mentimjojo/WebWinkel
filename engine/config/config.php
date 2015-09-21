@@ -19,7 +19,7 @@ $config = (object) array(
     ),
     // Debug array
     'debug' => (object) array(
-        'errors' => true,
+        'errors' => false,
         'getErrors' => array(),
         'database' => false
     ),

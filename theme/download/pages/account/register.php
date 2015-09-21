@@ -88,22 +88,22 @@
 			<form id="registration_form" method="post">
 				<div>
 					<label>
-						<input name="first_name" placeholder="<?=lang('register.first_name');?>" type="text" tabindex="1" required autofocus>
+						<input name="first_name" value="<?=$_POST['first_name'];?>" placeholder="<?=lang('register.first_name');?>" type="text" tabindex="1" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input name="insertion" placeholder="<?=lang('register.insertion');?>" type="text" tabindex="2">
+						<input name="insertion" value="<?=$_POST['insertion'];?>" placeholder="<?=lang('register.insertion');?>" type="text" tabindex="2">
 					</label>
 				</div>
 				<div>
 					<label>
-						<input name="last_name" placeholder="<?=lang('register.last_name');?>" type="text" tabindex="2" required autofocus>
+						<input name="last_name" value="<?=$_POST['last_name'];?>" placeholder="<?=lang('register.last_name');?>" type="text" tabindex="2" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input name="email" placeholder="<?=lang('register.email');?>" type="email" tabindex="3" required>
+						<input name="email" value="<?=$_POST['email'];?>" placeholder="<?=lang('register.email');?>" type="email" tabindex="3" required>
 					</label>
 				</div>
 				<div class="sky-form">

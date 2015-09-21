@@ -37,6 +37,23 @@ return (object) array(
                 'password' => 'Wachtwoord',
                 'signin' => 'Login',
                 'forgotpass' => 'Wachtwoord vergeten?'
+            ),
+            'messages' => (object) array(
+                'passwords' => 'De wachtwoorden die je hebt ingevuld zijn niet gelijk aan elkaar',
+                'exists' => 'Een account met dit email adres bestaat al, wil je hier rechts inloggen?',
+                'terms' => "Je bent niet akkoord gegaan met de algemene voorwaarden",
+                'success' => "Je account is aangemaakt."
+            ),
+            'emails' => (object) array(
+                'subject' => 'Account aangemaakt.',
+                'msg' => '<html><body>
+                                Hallo :name:,
+                                <br/><br/>
+                                Je account voor onze webshop PC4U is aangemaakt. We hopen dat je de producten vindt waar je naar op zoek bent.
+                                <br/><br/>
+                                Met vriendelijke groeten,<br/>
+                                PC4U
+                          </body></html>'
             )
         ),
         'cart' => (object) array(

@@ -2,6 +2,15 @@
 // Require configuration
 require_once __DIR__ . '/config/config.php';
 
+// Start session
+session_start();
+
+// Check if session is isset
+if(!isset($_SESSION['login_status'])){
+    // Set session
+    $_SESSION['login_status'] = 0;
+}
+
 // Enable debugging
 if($config->debug->errors == true) {
     // Display errors

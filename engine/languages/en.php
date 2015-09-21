@@ -56,6 +56,9 @@ return (object) array(
                           </body></html>'
             )
         ),
+        'account' => (object) array(
+            'button' => 'My account'
+        ),
         'cart' => (object) array(
             'items' => 'items',
             'checkout' => 'Checkout',

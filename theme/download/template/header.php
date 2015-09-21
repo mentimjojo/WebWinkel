@@ -63,7 +63,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="rgt-bottom">
                         <div class="log">
                             <div class="login" >
-                                <div id="loginContainer"><a href="#" id="loginButton"><span><?=lang('login.login')?></span></a>
+                                        <?php
+                                        if($_SESSION['login_status'] != 1)
+                                        {
+                                        ?>
+                                            <div id="loginContainer"><a href="#" id="loginButton"><span><?= lang('login.login') ?></span></a>
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <div id="accountContainer"><a href="#" ><span><?= lang('account.button') ?></span></a>
+                                        <?php
+                                        }
+                                        ?>
                                     <div id="loginBox">
                                         <form id="loginForm">
                                             <fieldset id="body">
@@ -84,8 +95,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </div>
                         </div>
-                        <div class="reg">
+                            <div class="reg">
+                            <?php
+                            if($_SESSION['login_status'] != 1)
+                            {
+                            ?>
                             <a href="<?=$config->path->basepath;?>/account/register/"><?=lang('header.register')?></a>
+                            <?php
+                            }
+                            ?>
                         </div>
                         <div class="cart box_1">
                             <a href="<?=$config->path->basepath;?>/cart/">

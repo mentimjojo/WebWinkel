@@ -449,6 +449,14 @@ select.item_Size {
   border: 1px solid #555;
   font-weight: 300;
 }
+
+#accountContainer a span {
+	display: block;
+	padding: 2px 14px;
+	border: 1px solid #555;
+	font-weight: 300;
+	width: 115px;
+}
 /* Login Button */
 #loginButton {
     display:inline-block;
