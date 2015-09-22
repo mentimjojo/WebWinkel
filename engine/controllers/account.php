@@ -38,7 +38,7 @@ class Account{
         // Make object
         $data = (object) $data;
         // Check if email exists in database
-        $check_query = "SELECT email FROM  " . $this->config->db_tables->account . " WHERE email = '$data->email'";
+        $check_query = "SELECT email FROM  " . $this->config->db_tables->users . " WHERE email = '$data->email'";
         // Prepare connection
         $result = $this->db->query($check_query);
         $result = $result->rowCount();
@@ -51,10 +51,12 @@ class Account{
             $pass_hash = $this->makePasswordHash($data->password);
             // Make user hash
             $user_hash = $this->makeUserHash($data->email, $data->password);
+            // Set birthday
+            $birthday = date("Y-m-d", strtotime($data->date));
             //Prepare query
-            $query = 'INSERT INTO ' . $this->config->db_tables->account . ' ';
-            $query .= '(hash, email, password, first_name, insertion, last_name, gender) ';
-            $query .= "VALUES ('$user_hash', '$data->email', '$pass_hash', '$data->first_name', '$data->insertion', '$data->last_name', '$data->gender')";
+            $query = 'INSERT INTO ' . $this->config->db_tables->users . ' ';
+            $query .= '(hash, email, password, first_name, insertion, last_name, gender, birthday) ';
+            $query .= "VALUES ('$user_hash', '$data->email', '$pass_hash', '$data->first_name', '$data->insertion', '$data->last_name', '$data->gender', '$birthday')";
             // Run query
             $result = $this->db->query($query);
             // Send email
@@ -80,7 +82,26 @@ class Account{
      * @password from user
      */
     public function loginUser($email, $password){
-
+        // Get lang
+        global $lang;
+        // Get user data out of database
+        $query = "SELECT * FROM " . $this->config->db_tables->users . " WHERE email = '$email' AND password = '$this->makePasswordHash($password)'";
+        // Run query
+        $result = $this->db->query($query);
+        // Check numrows
+        $rows = $result->rowCount();
+        // Check if account exists
+        if($rows != 1){
+            return 0;
+        } else {
+            // Fetch
+            $fetch = (object) $result->fetch();
+            // Set sessions
+            $_SESSION['login_status'] = 1;
+            $_SESSION['login_hash'] = $fetch->hash;
+            // Return 1;
+            return 1;
+        }
     }
 
     /**

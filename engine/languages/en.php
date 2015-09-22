@@ -23,6 +23,7 @@ return (object) array(
             'first_name' => 'First name',
             'insertion' => 'Insertion',
             'last_name' => 'Last name',
+            'date' => 'mm-dd-yyyy',
             'email' => 'Email address',
             'gender_m' => 'Male',
             'gender_v' => 'Female',
@@ -36,7 +37,11 @@ return (object) array(
                 'email' => 'Email',
                 'password' => 'Password',
                 'signin' => 'Sign in',
-                'forgotpass' => 'Forgot your password?'
+                'forgotpass' => 'Forgot your password?',
+                'messages' => (object) array(
+                    'error' => 'There is no account found with this data.',
+                    'success' => 'You are logged in. You wil be send to the home page.'
+                )
             ),
             'messages' => (object) array(
                 'passwords' => 'The passwords you filled in are not the same.',

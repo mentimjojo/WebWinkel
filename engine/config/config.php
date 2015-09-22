@@ -19,7 +19,7 @@ $config = (object) array(
     ),
     // Debug array
     'debug' => (object) array(
-        'errors' => false,
+        'errors' => true,
         'getErrors' => array(),
         'database' => false
     ),
@@ -38,6 +38,6 @@ $config->db_tables = (object) array(
     'config' => $config->db->prefix . 'config',
     'category' => $config->db->prefix . 'categories',
     'subcategories' => $config->db->prefix . 'subcategories',
-    'account' => $config->db->prefix . 'users'
+    'users' => $config->db->prefix . 'users'
 );
 ?>

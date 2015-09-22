@@ -53,12 +53,17 @@
 		 <div class="registration_form">
 		 <!-- Form -->
 			 <?php
+			 if(!isset($_POST['checkbox'])){
+				 $_POST['checkbox'] = false;
+			 }
+
 			 if(isset($_POST['register'])){
 				 // Get all form data
 				 $data = (object) array(
 					 'first_name' => $_POST['first_name'],
 					 'insertion' => $_POST['insertion'],
 					 'last_name' => $_POST['last_name'],
+					 'date' => $_POST['date'],
 					 'email' => $_POST['email'],
 					 'gender' => $_POST['gender'],
 					 'password' => $_POST['password'],
@@ -70,7 +75,7 @@
 				 if($data->password != $data->password_r){
 					 // Error report
 					 $msg = "<span style='color: red;'>".lang('register.messages.passwords')."</span>";
-				 } else if(!isset($_POST['checkbox'])){
+				 } else if(!$_POST['checkbox']){
 					 // Error report
 					 $msg = "<span style='color: red;'>".lang('register.messages.terms')."</span>";
 				 } else {
@@ -83,6 +88,17 @@
 						 $msg = "<span style='color: green;'>".lang('register.messages.success')."</span>";
 					 }
 				 }
+			 }
+
+			 if(!isset($_POST['email'])) {
+				 // Set fields
+				 $_POST = array(
+					 'first_name' => '',
+					 'insertion' => '',
+					 'last_name' => '',
+					 'date' => '',
+					 'email' => ''
+				 );
 			 }
 			 ?>
 			<form id="registration_form" method="post">
@@ -99,6 +115,11 @@
 				<div>
 					<label>
 						<input name="last_name" value="<?=$_POST['last_name'];?>" placeholder="<?=lang('register.last_name');?>" type="text" tabindex="2" required autofocus>
+					</label>
+				</div>
+				<div>
+					<label>
+						<input name="date" style="color:#999999;" value="<?=$_POST['date'];?>" type="date" tabindex="3" required>
 					</label>
 				</div>
 				<div>
@@ -139,20 +160,25 @@
 	<div class="registration_left">
 		<h2><?=lang('register.login.title');?></h2>
 		 <div class="registration_form">
+			 <?php
+			 if(isset($_POST['login'])){
+
+			 }
+			 ?>
 		 <!-- Form -->
 			<form id="registration_form" action="contact.php" method="post">
 				<div>
 					<label>
-						<input placeholder="<?=lang('register.login.email');?>" type="email" tabindex="3" required>
+						<input name="l_email" placeholder="<?=lang('register.login.email');?>" type="email" tabindex="3" required>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input placeholder="<?=lang('register.login.password');?>" type="password" tabindex="4" required>
+						<input name="l_password" placeholder="<?=lang('register.login.password');?>" type="password" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
-					<input type="submit" value="<?=lang('register.login.signin');?>" id="register-submit">
+					<input type="submit" name="login" value="<?=lang('register.login.signin');?>" id="register-submit">
 				</div>
 				<div class="forget">
 					<a href="#"><?=lang('register.login.forgotpass');?></a>

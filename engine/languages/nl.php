@@ -23,6 +23,7 @@ return (object) array(
             'first_name' => 'Voornaam',
             'insertion' => 'Tussenvoegsel',
             'last_name' => 'Achternaam',
+            'date' => 'dd-mm-yyyy',
             'email' => 'Email adres',
             'gender_m' => 'Man',
             'gender_v' => 'Vrouw',
