@@ -53,10 +53,18 @@ class Account{
             $user_hash = $this->makeUserHash($data->email, $data->password);
             // Set birthday
             $birthday = date("Y-m-d", strtotime($data->date));
+            // Check if newsletter is set
+            if($data->newsletter){
+                // Newsletter true
+                $newsletter = 1;
+            } else {
+                // Newsletter false
+                $newsletter = 0;
+            }
             //Prepare query
             $query = 'INSERT INTO ' . $this->config->db_tables->users . ' ';
-            $query .= '(hash, email, password, first_name, insertion, last_name, gender, birthday) ';
-            $query .= "VALUES ('$user_hash', '$data->email', '$pass_hash', '$data->first_name', '$data->insertion', '$data->last_name', '$data->gender', '$birthday')";
+            $query .= '(hash, email, password, first_name, insertion, last_name, gender, birthday, newsletter) ';
+            $query .= "VALUES ('$user_hash', '$data->email', '$pass_hash', '$data->first_name', '$data->insertion', '$data->last_name', '$data->gender', '$birthday', '$newsletter')";
             // Run query
             $result = $this->db->query($query);
             // Send email

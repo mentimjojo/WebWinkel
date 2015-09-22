@@ -30,6 +30,7 @@ return (object) array(
             'gender_un' => 'Unspecified',
             'password' => 'Password',
             'password_r' => 'Repeat password',
+            'newsletter' => 'I want to subscribe to the newsletter.',
             'terms' => 'I agree to :name: <a class="terms" href="#"> terms of service</a>.',
             'button' => 'Create an account',
             'login' => (object) array(

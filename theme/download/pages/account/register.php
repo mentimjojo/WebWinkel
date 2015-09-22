@@ -53,9 +53,11 @@
 		 <div class="registration_form">
 		 <!-- Form -->
 			 <?php
-			 if(!isset($_POST['checkbox'])){
+			 if(!isset($_POST['checkbox']))
 				 $_POST['checkbox'] = false;
-			 }
+			 if(!isset($_POST['newsletter']))
+				 $_POST['newsletter'] = false;
+
 
 			 if(isset($_POST['register'])){
 				 // Get all form data
@@ -68,7 +70,8 @@
 					 'gender' => $_POST['gender'],
 					 'password' => $_POST['password'],
 					 'password_r' => $_POST['password_r'],
-					 'checkbox' => $_POST['checkbox']
+					 'checkbox' => $_POST['checkbox'],
+					 'newsletter' => $_POST['newsletter']
 				 );
 				 
 				 // Check if password 
@@ -146,6 +149,9 @@
 					<label>
 						<input name="password_r" placeholder="<?=lang('register.password_r');?>" type="password" tabindex="4" required>
 					</label>
+				</div>
+				<div class="sky-form">
+					<label class="checkbox"><input type="checkbox" name="newsletter" checked ><i></i><?=lang('register.newsletter');?>
 				</div>
 				<div class="sky-form">
 					<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i><?=lang('register.terms', array('name' => $config->dbconfig->title));?>
