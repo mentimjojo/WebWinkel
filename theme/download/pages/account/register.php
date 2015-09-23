@@ -57,6 +57,10 @@
 				 $_POST['checkbox'] = false;
 			 if(!isset($_POST['newsletter']))
 				 $_POST['newsletter'] = false;
+			 if(!isset($msg))
+				 $msg = '';
+			 if(!isset($l_msg))
+				 $l_msg = '';
 
 
 			 if(isset($_POST['register'])){
@@ -77,18 +81,18 @@
 				 // Check if password 
 				 if($data->password != $data->password_r){
 					 // Error report
-					 $msg = "<span style='color: red;'>".lang('register.messages.passwords')."</span>";
+					 $msg = "<span style='color: red;'>".$lang->get('register.messages.passwords')."</span>";
 				 } else if(!$_POST['checkbox']){
 					 // Error report
-					 $msg = "<span style='color: red;'>".lang('register.messages.terms')."</span>";
+					 $msg = "<span style='color: red;'>".$lang->get('register.messages.terms')."</span>";
 				 } else {
 					 // Check if password same
 					 $result = $account->registerUser($data);
 					 // Succes message
 					 if($result == 0) {
-						 $msg = "<span style='color: red;'>".lang('register.messages.exists')."</span>";
+						 $msg = "<span style='color: red;'>".$lang->get('register.messages.exists')."</span>";
 					 } else {
-						 $msg = "<span style='color: green;'>".lang('register.messages.success')."</span>";
+						 $msg = "<span style='color: green;'>".$lang->get('register.messages.success')."</span>";
 					 }
 				 }
 			 }
@@ -103,6 +107,9 @@
 					 'email' => ''
 				 );
 			 }
+
+			 // Echo message
+			 echo $msg;
 			 ?>
 			<form id="registration_form" method="post">
 				<div>
@@ -166,13 +173,26 @@
 	<div class="registration_left">
 		<h2><?=lang('register.login.title');?></h2>
 		 <div class="registration_form">
+			 echo 1;
 			 <?php
 			 if(isset($_POST['login'])){
 
+				 $result = $account->loginUser($_POST['l_email'], $_POST['l_password']);
+					echo "TESTTTT";
+				 if($result == 0){
+					 $l_msg = $lang->get('register.login.messages.error');
+				 } else if($result == 1){
+					 $l_msg = $lang->get('register.login.messages.success');
+				 }
+
 			 }
+
+			 // Echo message
+			 echo $l_msg;
 			 ?>
+			 echo 2;
 		 <!-- Form -->
-			<form id="registration_form" action="contact.php" method="post">
+			<form id="login_form" method="post">
 				<div>
 					<label>
 						<input name="l_email" placeholder="<?=lang('register.login.email');?>" type="email" tabindex="3" required>
@@ -184,7 +204,7 @@
 					</label>
 				</div>						
 				<div>
-					<input type="submit" name="login" value="<?=lang('register.login.signin');?>" id="register-submit">
+					<input type="submit" name="login" value="<?=lang('register.login.signin');?>" id="login-submit">
 				</div>
 				<div class="forget">
 					<a href="#"><?=lang('register.login.forgotpass');?></a>

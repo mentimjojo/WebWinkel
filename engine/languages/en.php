@@ -48,7 +48,7 @@ return (object) array(
                 'passwords' => 'The passwords you filled in are not the same.',
                 'exists' => 'An account with this email address already exists? Do you want to log in on the right?',
                 'terms' => "You didn't accept the therms of service.",
-                'success' => "Your account has been created."
+                'success' => "Your account has been created also we send you a welcome's mail."
             ),
             'emails' => (object) array(
                 'subject' => 'Account created.',

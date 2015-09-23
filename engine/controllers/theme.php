@@ -7,6 +7,7 @@ class Theme{
     public function __construct(){
         // Global config
         global $config;
+        global $lang;
         global $categories;
         global $theme;
         global $account;
@@ -16,6 +17,7 @@ class Theme{
     public function getTheme(){
         // Global config
         global $config;
+        global $lang;
         global $categories;
         global $theme;
         global $account;
@@ -30,6 +32,7 @@ class Theme{
     public function PageSystem(){
         // Global config
         global $config;
+        global $lang;
         global $categories;
         global $theme;
         global $account;
