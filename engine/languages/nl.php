@@ -63,7 +63,7 @@ return (object) array(
             )
         ),
         'account' => (object) array(
-            'button' => 'My account'
+            'button' => 'Mijn account'
         ),
         'cart' => (object) array(
             'items' => 'producten',

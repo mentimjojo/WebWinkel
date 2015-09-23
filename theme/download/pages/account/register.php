@@ -182,6 +182,7 @@
 					 $l_msg = "<span style='color: red;'>".$lang->get('register.login.messages.error')."</span>";
 				 } else if($result == 1){
 					 $l_msg = "<span style='color: green;'>".$lang->get('register.login.messages.success')."</span>";
+					 echo '<meta http-equiv="refresh" content="3;URL='.$config->path->basepath.'/home/" />';
 				 }
 
 			 } else {
