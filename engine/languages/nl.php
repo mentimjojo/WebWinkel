@@ -48,7 +48,7 @@ return (object) array(
                 'passwords' => 'De wachtwoorden die je hebt ingevuld zijn niet gelijk aan elkaar',
                 'exists' => 'Een account met dit email adres bestaat al, wil je hier rechts inloggen?',
                 'terms' => "Je bent niet akkoord gegaan met de algemene voorwaarden",
-                'success' => "Je account is aangemaakt."
+                'success' => "Je account is aangemaakt en we hebben je een welkoms mail gestuurd."
             ),
             'emails' => (object) array(
                 'subject' => 'Account aangemaakt.',
