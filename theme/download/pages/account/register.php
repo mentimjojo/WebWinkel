@@ -179,9 +179,12 @@
 
 				 // Result
 				 if($result == 0){
+					 // Error message
 					 $l_msg = "<span style='color: red;'>".$lang->get('register.login.messages.error')."</span>";
 				 } else if($result == 1){
+					 // Success message
 					 $l_msg = "<span style='color: green;'>".$lang->get('register.login.messages.success')."</span>";
+					 // Send to home page
 					 echo '<meta http-equiv="refresh" content="3;URL='.$config->path->basepath.'/home/" />';
 				 }
 
