@@ -30,6 +30,7 @@ return (object) array(
             'gender_un' => 'Ongespecificeerd',
             'password' => 'Wachtwoord',
             'password_r' => 'Herhaal wachtwoord',
+            'newsletter' => 'Ik wil me aanmelden voor de nieuwsbrief.',
             'terms' => 'Ik ga akkoord met :name: <a class="terms" href="#"> algemene voorwaarden</a>.',
             'button' => 'Maak account',
             'login' => (object) array(
@@ -37,7 +38,11 @@ return (object) array(
                 'email' => 'Email',
                 'password' => 'Wachtwoord',
                 'signin' => 'Login',
-                'forgotpass' => 'Wachtwoord vergeten?'
+                'forgotpass' => 'Wachtwoord vergeten?',
+                'messages' => (object) array(
+                    'error' => 'Er is geen account gevonden met deze gegevens.',
+                    'success' => 'Je bent succesvol ingelogd. Je word doorgestuurd naar de home pagina.'
+                )
             ),
             'messages' => (object) array(
                 'passwords' => 'De wachtwoorden die je hebt ingevuld zijn niet gelijk aan elkaar',
@@ -56,6 +61,9 @@ return (object) array(
                                 PC4U
                           </body></html>'
             )
+        ),
+        'account' => (object) array(
+            'button' => 'My account'
         ),
         'cart' => (object) array(
             'items' => 'producten',
@@ -93,6 +101,5 @@ return (object) array(
             'info' => 'Informatie',
             'template' => 'Template door R.Schepers'
         )
-
     )
 );

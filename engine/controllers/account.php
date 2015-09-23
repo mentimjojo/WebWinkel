@@ -92,8 +92,10 @@ class Account{
     public function loginUser($email, $password){
         // Get lang
         global $lang;
+        // Hashed password
+        $pass_hash = $this->makePasswordHash($password);
         // Get user data out of database
-        $query = "SELECT * FROM " . $this->config->db_tables->users . " WHERE email = '$email' AND password = '$this->makePasswordHash($password)'";
+        $query = "SELECT * FROM " . $this->config->db_tables->users . " WHERE email = '$email' AND password = '$pass_hash'";
         // Run query
         $result = $this->db->query($query);
         // Check numrows

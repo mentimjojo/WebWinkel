@@ -95,18 +95,16 @@
 						 $msg = "<span style='color: green;'>".$lang->get('register.messages.success')."</span>";
 					 }
 				 }
+			 } else {
+				 $_POST['first_name'] = '';
+				 $_POST['insertion'] = '';
+				 $_POST['last_name'] = '';
+				 $_POST['date'] = '';
+				 $_POST['email'] = '';
 			 }
 
-			 if(!isset($_POST['email'])) {
-				 // Set fields
-				 $_POST = array(
-					 'first_name' => '',
-					 'insertion' => '',
-					 'last_name' => '',
-					 'date' => '',
-					 'email' => ''
-				 );
-			 }
+
+
 
 			 // Echo message
 			 echo $msg;
@@ -149,7 +147,7 @@
 				</div>
 				<div>
 					<label>
-						<input name="password" placeholder="<?=lang('register.password');?>" type="password" tabindex="4" required>
+						<input name="password" placeholder="<?=lang('register.password');?>"type="password" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
@@ -173,34 +171,37 @@
 	<div class="registration_left">
 		<h2><?=lang('register.login.title');?></h2>
 		 <div class="registration_form">
-			 echo 1;
 			 <?php
 			 if(isset($_POST['login'])){
 
+				 // Result
 				 $result = $account->loginUser($_POST['l_email'], $_POST['l_password']);
-					echo "TESTTTT";
+
+				 // Result
 				 if($result == 0){
-					 $l_msg = $lang->get('register.login.messages.error');
+					 $l_msg = "<span style='color: red;'>".$lang->get('register.login.messages.error')."</span>";
 				 } else if($result == 1){
-					 $l_msg = $lang->get('register.login.messages.success');
+					 $l_msg = "<span style='color: green;'>".$lang->get('register.login.messages.success')."</span>";
 				 }
 
+			 } else {
+				 $_POST['l_email'] = '';
+				 $_POST['l_password'] = '';
 			 }
 
 			 // Echo message
 			 echo $l_msg;
 			 ?>
-			 echo 2;
 		 <!-- Form -->
 			<form id="login_form" method="post">
 				<div>
 					<label>
-						<input name="l_email" placeholder="<?=lang('register.login.email');?>" type="email" tabindex="3" required>
+						<input name="l_email" placeholder="<?=lang('register.login.email');?>" value="<?=$_POST['l_email'];?>"  type="email" tabindex="3" required>
 					</label>
 				</div>
 				<div>
 					<label>
-						<input name="l_password" placeholder="<?=lang('register.login.password');?>" type="password" tabindex="4" required>
+						<input name="l_password" placeholder="<?=lang('register.login.password');?>" value="<?=$_POST['l_password'];?>" type="password" tabindex="4" required>
 					</label>
 				</div>						
 				<div>
