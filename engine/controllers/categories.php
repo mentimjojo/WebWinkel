@@ -100,16 +100,27 @@ class Categories {
         return false;
     }
 
+    /**
+     * @param int $cat_id category id
+     * @return object the sub categories
+     */
     public function getAllSub($cat_id = 0)
     {
         // Global config
         global $config;
         if (!isset($this->subcategories['cat'][$cat_id])) {
+            // No sub categories
             return (object)array();
         } else {
+            // Return the sub categories
             return $this->subcategories['cat'][$cat_id];
         }
     }
+
+    /**
+     * @param int $sub_id sub category id
+     * @return object the sub category
+     */
     public function getOneSub($sub_id = 0)
     {
         global $config;
