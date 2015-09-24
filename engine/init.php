@@ -116,5 +116,4 @@ $theme = new Theme();
 // Get theme
 $theme->getTheme();
 
-//
 ?>
