@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="header">
             <div class="head-t">
                 <div class="logo">
-                    <a href="index.php"><img src="<?=$config->theme->url;?>/images/pc4u.png" class="img-responsive" alt=""/> </a>
+                    <a href="<?=$config->path->basepath;?>/home/"><img src="<?=$config->theme->url;?>/images/pc4u.png" class="img-responsive" alt=""/> </a>
                 </div>
                 <!-- start header_right -->
                 <div class="header_right">
@@ -74,19 +74,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div id="accountContainer"><a href="#" ><span><?= lang('account.button') ?></span></a>
                                         <?php
                                         }
+
+                                        if(isset($_POST['lb_login'])) {
+
+
+                                            $lb_result = $account->loginUser($_POST['lb_email'], $_POST['lb_password']);
+
+                                            // Result
+                                            if($lb_result == 0){
+                                                // Send to error page
+                                                header('location: '.$config->path->basepath.'/account/register/&error=1');
+                                            } else if($lb_result == 1){
+                                                // Send to home page
+                                                header('location: '.$config->path->basepath.'/home/');
+                                            }
+
+                                        } else {
+                                            // Set post
+                                            $_POST['lb_email'] = '';
+                                            $_POST['lb_password'] = '';
+                                        }
                                         ?>
                                     <div id="loginBox">
-                                        <form id="loginForm">
+                                        <form id="loginForm" method="post">
                                             <fieldset id="body">
                                                 <fieldset>
                                                     <label for="email"><?=lang('login.email')?></label>
-                                                    <input type="text" name="email" id="email">
+                                                    <input type="text" name="lb_email" id="email" value="<?=$_POST['lb_email'];?>" required>
                                                 </fieldset>
                                                 <fieldset>
                                                     <label for="password"><?=lang('login.password')?></label>
-                                                    <input type="password" name="password" id="password">
+                                                    <input type="password" name="lb_password" id="password" value="<?=$_POST['lb_password'];?>" required>
                                                 </fieldset>
-                                                <input type="submit" id="login" value="<?=lang('login.signin')?>">
+                                                <input type="submit" name="lb_login" id="login" value="<?=lang('login.signin')?>">
                                                 <label for="checkbox"><input type="checkbox" id="checkbox"> <i><?=lang('login.remember')?></i></label>
                                             </fieldset>
                                             <span><a href="#"><?=lang('login.forgot')?></a></span>

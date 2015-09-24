@@ -193,6 +193,12 @@
 				 $_POST['l_password'] = '';
 			 }
 
+			 if(!isset($_GET['error'])){
+				 $_GET['error'] = '';
+			 } else if($_GET['error'] == 1) {
+				 $l_msg = "<span style='color: red;'>".$lang->get('register.login.messages.error')."</span>";
+			 }
+
 			 // Echo message
 			 echo $l_msg;
 			 ?>

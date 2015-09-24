@@ -5,6 +5,9 @@ require_once __DIR__ . '/config/config.php';
 // Start session
 session_start();
 
+// Start ob
+ob_start();
+
 // Check if session is isset
 if(!isset($_SESSION['login_status'])){
     // Set session
@@ -89,9 +92,25 @@ $mailer = new Mailer();
 // Register account
 $account = new Account();
 
+// Check if user want to logout
+if(!isset($_GET['logout'])){
+    // Set logout if is nothing
+    $_GET['logout'] = '';
+    // Set session nothing
+    if($_SESSION['login_status'] == 0) {
+        // Set hash nothing
+        $_SESSION['login_hash'] = '';
+    }
+} else if($_GET['logout'] == 1){
+    // Logoout user
+    $account->logoutUser($_SESSION['login_hash']);
+    // Send to home page
+    header('location: '.$config->path->basepath.'/home/');
+}
+
 // Create theme object
 $theme = new Theme();
 
 // Get theme
 $theme->getTheme();
-?>
+?>z

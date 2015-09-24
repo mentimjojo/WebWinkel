@@ -115,10 +115,21 @@ class Account{
     }
 
     /**
+     * Logout
+     * @email logout
+     */
+    public function logoutUser($hash){
+        // Log out, destroy sessions
+        session_destroy();
+    }
+
+    /**
      * Password forget
      * @Email email from user
      */
     public function forgotPassword($email){
+        // Get language
+        global $lang;
 
     }
 
