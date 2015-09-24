@@ -64,14 +64,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <?php
                                         if($_SESSION['login_status'] != 1)
                                         {
-                                        ?>
-                                            <div id="loginContainer"><a href="#" id="loginButton"><span><?= lang('login.login') ?></span></a>
-                                        <?php
-                                        } else {
-                                        ?>
-                                            <div id="accountContainer"><a href="#" ><span><?= lang('account.button') ?></span></a>
-                                        <?php
-                                        }
 
                                         if(isset($_POST['lb_login'])) {
 
@@ -92,24 +84,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             $_POST['lb_email'] = '';
                                             $_POST['lb_password'] = '';
                                         }
+
                                         ?>
-                                    <div id="loginBox">
-                                        <form id="loginForm" method="post">
-                                            <fieldset id="body">
-                                                <fieldset>
-                                                    <label for="email"><?=lang('login.email')?></label>
-                                                    <input type="text" name="lb_email" id="email" value="<?=$_POST['lb_email'];?>" required>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="password"><?=lang('login.password')?></label>
-                                                    <input type="password" name="lb_password" id="password" value="<?=$_POST['lb_password'];?>" required>
-                                                </fieldset>
-                                                <input type="submit" name="lb_login" id="login" value="<?=lang('login.signin')?>">
-                                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i><?=lang('login.remember')?></i></label>
-                                            </fieldset>
-                                            <span><a href="#"><?=lang('login.forgot')?></a></span>
-                                        </form>
-                                    </div>
+                                            <div id="loginContainer"><a href="#" id="loginButton"><span><?= lang('login.login') ?></span></a>
+
+                                                <div id="loginBox">
+                                                    <form id="loginForm" method="post">
+                                                        <fieldset id="body">
+                                                            <fieldset>
+                                                                <label for="email"><?=lang('login.email')?></label>
+                                                                <input type="text" name="lb_email" id="email" value="<?=$_POST['lb_email'];?>" required>
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <label for="password"><?=lang('login.password')?></label>
+                                                                <input type="password" name="lb_password" id="password" value="<?=$_POST['lb_password'];?>" required>
+                                                            </fieldset>
+                                                            <input type="submit" name="lb_login" id="login" value="<?=lang('login.signin')?>">
+                                                            <label for="checkbox"><input type="checkbox" id="checkbox"> <i><?=lang('login.remember')?></i></label>
+                                                        </fieldset>
+                                                        <span><a href="#"><?=lang('login.forgot')?></a></span>
+                                                    </form>
+                                                </div>
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <div id="accountContainer"><a href="#" ><span><?= lang('account.button') ?></span></a>
+                                        <?php
+                                        }
+                                        ?>
                                 </div>
                             </div>
                         </div>

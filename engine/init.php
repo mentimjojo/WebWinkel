@@ -5,7 +5,7 @@ require_once __DIR__ . '/config/config.php';
 // Start session
 session_start();
 
-// Start ob
+// Start ob so we dont get header already send
 ob_start();
 
 // Check if session is isset
@@ -113,4 +113,5 @@ $theme = new Theme();
 
 // Get theme
 $theme->getTheme();
-?>z
+
+?>
