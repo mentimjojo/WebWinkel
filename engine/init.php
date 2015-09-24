@@ -110,6 +110,23 @@ if (!isset($_GET['logout'])) {
     header('location: ' . $config->path->basepath . '/home/');
 }
 
+// Check when user last was online
+if(!isset($_SESSION['login_activity'])){
+    // If not set, start
+    $_SESSION['login_activity'] = '';
+    // Check if 30 min offline
+} else if(isset($_SESSION['login_activity']) && (time() - $_SESSION['login_activity'] > 1800)){
+    //Destroy session
+    session_destroy();
+}
+
+// Set activity when logged in
+if($_SESSION['login_status'] == 1){
+    // Set time
+    $_SESSION['login_activity'] = time();
+}
+
+
 // Create theme object
 $theme = new Theme();
 
