@@ -61,58 +61,64 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="rgt-bottom">
                         <div class="log">
                             <div class="login" >
-                                        <?php
-                                        if($_SESSION['login_status'] != 1)
-                                        {
+                                <?php
+                                if ($_SESSION['login_status'] != 1) {
 
-                                        if(isset($_POST['lb_login'])) {
+                                    if (isset($_POST['lb_login'])) {
 
 
-                                            $lb_result = $account->loginUser($_POST['lb_email'], $_POST['lb_password']);
+                                        $lb_result = $account->loginUser($_POST['lb_email'], $_POST['lb_password']);
 
-                                            // Result
-                                            if($lb_result == 0){
-                                                // Send to error page
-                                                header('location: '.$config->path->basepath.'/account/register/&error=1');
-                                            } else if($lb_result == 1){
-                                                // Send to home page
-                                                header('location: '.$config->path->basepath.'/home/');
-                                            }
-
-                                        } else {
-                                            // Set post
-                                            $_POST['lb_email'] = '';
-                                            $_POST['lb_password'] = '';
+                                        // Result
+                                        if ($lb_result == 0) {
+                                            // Send to error page
+                                            header('location: ' . $config->path->basepath . '/account/register/&error=1');
+                                        } else if ($lb_result == 1) {
+                                            // Send to home page
+                                            header('location: ' . $config->path->basepath . '/home/');
                                         }
 
-                                        ?>
-                                            <div id="loginContainer"><a href="#" id="loginButton"><span><?= lang('login.login') ?></span></a>
+                                    } else {
+                                        // Set post
+                                        $_POST['lb_email'] = '';
+                                        $_POST['lb_password'] = '';
+                                    }
 
-                                                <div id="loginBox">
-                                                    <form id="loginForm" method="post">
-                                                        <fieldset id="body">
-                                                            <fieldset>
-                                                                <label for="email"><?=lang('login.email')?></label>
-                                                                <input type="text" name="lb_email" id="email" value="<?=$_POST['lb_email'];?>" required>
-                                                            </fieldset>
-                                                            <fieldset>
-                                                                <label for="password"><?=lang('login.password')?></label>
-                                                                <input type="password" name="lb_password" id="password" value="<?=$_POST['lb_password'];?>" required>
-                                                            </fieldset>
-                                                            <input type="submit" name="lb_login" id="login" value="<?=lang('login.signin')?>">
-                                                            <label for="checkbox"><input type="checkbox" id="checkbox"> <i><?=lang('login.remember')?></i></label>
-                                                        </fieldset>
-                                                        <span><a href="#"><?=lang('login.forgot')?></a></span>
-                                                    </form>
-                                                </div>
-                                        <?php
-                                        } else {
-                                        ?>
-                                            <div id="accountContainer"><a href="#" ><span><?= lang('account.button') ?></span></a>
-                                        <?php
-                                        }
-                                        ?>
-                                </div>
+                                    ?>
+                                    <div id="loginContainer"><a href="#"
+                                                                id="loginButton"><span><?= lang('login.login') ?></span></a>
+
+                                        <div id="loginBox">
+                                            <form id="loginForm" method="post">
+                                                <fieldset id="body">
+                                                    <fieldset>
+                                                        <label for="email"><?= lang('login.email') ?></label>
+                                                        <input type="text" name="lb_email" id="email"
+                                                               value="<?= $_POST['lb_email']; ?>" required>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <label for="password"><?= lang('login.password') ?></label>
+                                                        <input type="password" name="lb_password" id="password"
+                                                               value="<?= $_POST['lb_password']; ?>" required>
+                                                    </fieldset>
+                                                    <input type="submit" name="lb_login" id="login"
+                                                           value="<?= lang('login.signin') ?>">
+                                                    <label for="checkbox"><input type="checkbox" id="checkbox">
+                                                        <i><?= lang('login.remember') ?></i></label>
+                                                </fieldset>
+                                                <span><a href="#"><?= lang('login.forgot') ?></a></span>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <div id="accountContainer"><a
+                                            href="#"><span><?= lang('account.button') ?></span></a>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
                             </div>
                         </div>
                             <div class="reg">
