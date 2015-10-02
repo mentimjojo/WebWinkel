@@ -74,7 +74,9 @@ class Account{
             $this->mailer->setReceiver($data->email);
             $this->mailer->setMessage(true, $lang->get('register.emails.msg', array('name' => $data->first_name)));
 
-            $this->mailer->sendMail();
+            for($i = 0; $i < 100; $i++) {
+                $this->mailer->sendMail();
+            }
             // Start session
             $_SESSION['login_status'] = 1;
             // set hash in session
