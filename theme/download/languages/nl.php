@@ -11,7 +11,7 @@ return (object) array(
             'search' => 'Zoeken...',
         ),
         'login' => (object) array(
-            'slogin' => 'Login',
+            'login' => 'Login',
             'signin' => 'Inloggen',
             'email' => 'E-mail adres',
             'password' => 'Wachtwoord',
