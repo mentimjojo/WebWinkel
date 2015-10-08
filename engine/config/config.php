@@ -8,7 +8,7 @@ $config = (object) array(
     ),
     // Language
     'language' => (object) array(
-        'default' => 'nl',
+        'default' => 'en',
         'path' => 'languages'
     ),
     // Theme system
