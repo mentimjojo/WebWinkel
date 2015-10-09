@@ -22,6 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
     <!-- start menu -->
     <link href="<?=$config->theme->url;?>/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?=$config->theme->url;?>/css/AccountMenu.css" rel="stylesheet" type="text/css" media="all" />
     <script type="text/javascript" src="<?=$config->theme->url;?>/js/megamenu.js"></script>
     <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
     <script src="<?=$config->theme->url;?>/js/menu_jquery.js"></script>
@@ -85,9 +86,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     }
 
                                     ?>
-                                    <div id="loginContainer"><a href="#"
-                                                                id="loginButton"><span><?= lang('login.login') ?></span></a>
-
+                                    <div id="loginContainer"><a href="#" id="loginButton"><span><?= lang('login.login') ?></span></a>
                                         <div id="loginBox">
                                             <form id="loginForm" method="post">
                                                 <fieldset id="body">
@@ -113,8 +112,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <?php
                                 } else {
                                     ?>
-                                    <div id="accountContainer"><a
-                                            href="#"><span><?= lang('account.button') ?></span></a>
+                                    <div id="accountContainer"><a href="#" id="accountButton"><span><?= lang('account.button') ?></span></a>
+                                        <div id="loginBox" class="moveAccountMenu">
+                                            <fieldset id="body">
+                                                <fieldset>
+                                                    <a href="#"><span>Profiel</span></a>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <a href="#"><span>Bestellingen</span></a>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <a href="#"><span>Uitloggen</span></a>
+                                                </fieldset>
+                                            </fieldset>
+                                        </div>
                                     </div>
                                     <?php
                                 }
